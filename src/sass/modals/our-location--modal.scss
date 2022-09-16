@@ -1,0 +1,28 @@
+// !Виталий Овсянников
+
+// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
+
+// .overlay {
+
+//   opacity: 0;
+//   visibility: hidden;
+
+//інші стилі
+
+// }
+
+// .modal {
+
+//   opacity: 0;
+//   visibility: hidden;
+
+//   інші стилі
+// }
+
+// !потім додаємо клас active(тільки в CSS) щоб JS працював
+
+// .modal.active,
+// .overlay.active {
+//   opacity: 1;
+//   visibility: visible;
+// }
