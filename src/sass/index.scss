@@ -1,2 +1,22 @@
 @import './common';
-@import './example';
+
+@import './utils/variables';
+@import './utils/viewpot-mixin';
+
+@import './base/conteiner';
+@import './base/section';
+
+@import './components/heder-hero';
+@import './components/products';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/customer-reviews';
+@import './components/contacts';
+@import './components/footer';
+
+@import './modals/buy-now--modal_header.scss';
+@import './modals/buy-now--modal_products.scss';
+@import './modals/read-more--modal.scss';
+@import './modals/our-location--modal.scss';
+@import './modals/franchise--modal.scss';

@@ -1,0 +1,8 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(tablet-only) {
+    padding-bottom: 82px;
+  }
+}
