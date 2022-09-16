@@ -1,1 +1,24 @@
 // !Мазка Андрей
+.about__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  padding: 0 auto;
+  margin-bottom: 12px;
+}
+.about__title--part {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.27;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  width: 200px;
+  margin: 0 auto 32px;
+}
