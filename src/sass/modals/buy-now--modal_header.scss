@@ -37,21 +37,21 @@
 .modal__buy-now {
   opacity: 0;
   visibility: hidden;
-  position: fixed;
-  width: 450px;
+  position: absolute;
+  width: 440px;
   max-height: 986px;
   background-color: #fcfcfc;
   border-radius: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 28px;
+  padding: 28px 28px;
   max-width: 100%;
   transition: 0.3s all;
 
   @include for-size(tablet) {
     width: 568px;
-    min-height: 644px;
+    max-height: 644px;
     padding: 32px 54px;
   }
 }
