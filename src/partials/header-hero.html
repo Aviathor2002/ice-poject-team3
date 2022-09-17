@@ -1,13 +1,74 @@
 <!-- !Іщук Віталій -->
-<section class="section">
+<section class="section section-padding">
   <div class="conteiner header">
-    <div class="header-mob">
-      <svg class="check-icon" width="40" height="37">
-        <use href="./images/svg/svg-sprite.svg#ice-crema"></use>
+    <div class="header__mob">
+      <svg class="header--icon" width="40" height="37">
+        <use href="./images/svg/svg-sprite.svg#ice-crem-desk"></use>
       </svg>
-      <svg class="check-icon" width="40" height="37">
-        <use href="./images/svg/svg-sprite.svg#weight"></use>
-      </svg>
+      <button type="button" class="header-open">
+        <svg class="menu-icon" width="32" height="32">
+          <use href="./images/svg/svg-sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <div class="mob--nenu">
+        <div class="mob-modal">
+          <svg class="header__icon" width="40" height="37">
+            <use href="./images/svg/svg-sprite.svg#ice-crem-desk"></use>
+          </svg>
+          <button type="button">
+            <svg class="header__icon" width="19" height="19">
+              <use href="./images/svg/svg-sprite.svg#mobile-close"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="navigation">
+          <li class="navigation__list">
+            <a href="" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__list">
+            <a href="" class="navigation__link">How it’s made?</a>
+          </li>
+          <li class="navigation__list">
+            <a href="" class="navigation__link">Our products</a>
+          </li>
+          <li class="navigation__list">
+            <a href="" class="navigation__link">Contact</a>
+          </li>
+        </ul>
+        <button type="button" class="header__buy">Buy now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="conteiner hero">
+    <h1 class="hero__text">ice cream made with passion</h1>
+    <div class="hero__info">
+      <button class="hero__button" type="button">Products</button>
+      <a href="" class="hero__link">How it’s made?</a>
+    </div>
+    <div class="hero__ice">
+      <picture class="hero__foto--ice">
+        <source
+          srcset="
+            ./images/header-hero/icecream-mo-1x.png 1x,
+            ./images/header-hero/icecream-mo-2x.png 2x
+          "
+          media="(max-width:768px)"
+        />
+        <img src="./images/header-hero/icecream-mo-2x.png" alt="icecream" />
+      </picture>
+      <picture class="hero__foto--tochki">
+        <source
+          srcset="
+            ./images/header-hero/tochka-mob-1x.png 1x,
+            ./images/header-hero/tochka-mob-2x.png 2x
+          "
+          media="(max-width:768px)"
+        />
+        <img src="./images/header-hero/tochka-mob-2x.png" alt="icecream" />
+      </picture>
     </div>
   </div>
 </section>
