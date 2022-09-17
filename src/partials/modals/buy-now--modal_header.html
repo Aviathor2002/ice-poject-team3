@@ -8,92 +8,91 @@
 <!-- До SVG додоєм клас *js-modal-close* -->
 
 <!-- при створенні оверлея додаєм йому клас *js-overlay-modal* -->
+
 <button type="button" class="js-open-modal" data-modal="modal__buy-now">
   modal buy-now
 </button>
-<div class="overlay js-overlay-modal">
-  <div class="modal__buy-now modal" data-modal="modal__buy-now">
-    <button type="button" class="buy-now__modal-icon-close js-modal-close">
-      <svg width="20" height="20">
-        <use href="./images/svg/svg-sprite.svg#close-icon"></use>
-      </svg>
-    </button>
-    <p class="modal__first-title">Buy now</p>
+<div class="modal__buy-now modal" data-modal="modal__buy-now">
+  <button type="button" class="buy-now__modal-icon-close js-modal-close">
+    <svg width="20" height="20">
+      <use href="./images/svg/svg-sprite.svg#close-icon"></use>
+    </svg>
+  </button>
+  <p class="modal__first-title">Buy now</p>
+  <ul class="modal__first-list">
+    <li class="modal__first-item">
+      <a href=""></a>
+      <picture>
+        <source
+          srcset="
+            ./images/buy-now-modal/ice-cream.png    1x,
+            ./images/buy-now-modal/ice-cream-2x.png 2x
+          " />
+        <img
+          src="./images/buy-now-modal/ice-cream.png"
+          alt="ice cream"
+          class="modal__first-item-img modal__first-item-img--green"
+      /></picture>
+      <p class="modal__first-text modal__first-text--green">ice cream</p>
+    </li>
+    <li class="modal__first-item">
+      <a href=""></a>
+      <picture>
+        <source
+          srcset="
+            ./images/buy-now-modal/ice-coffee.png    1x,
+            ./images/buy-now-modal/ice-coffee-2x.png 2x
+          " />
+        <img
+          src="./images/buy-now-modal/ice-coffee.png"
+          alt="ice-coffee"
+          class="modal__first-item-img modal__first-item-img--orange"
+      /></picture>
+      <p class="modal__first-text modal__first-text--orange">ice coffee</p>
+    </li>
+    <li class="modal__first-item">
+      <a href=""></a>
+      <picture>
+        <img
+          src="./images/buy-now-modal/milkshake.png"
+          alt="milkshake"
+          class="modal__first-item-img modal__first-item-img--chocolate"
+        />
+      </picture>
 
-    <ul class="modal__first-list">
-      <li class="modal__first-item">
-        <a href=""></a>
-          <picture>
-            <source srcset="./images/buy-now-modal/ice-cream.png 1x, ./images/buy-now-modal/ice-cream-2x.png 2x">
-            <img
-            src="./images/buy-now-modal/ice-cream.png"
-            alt="ice cream"
-            class="modal__first-item-img modal__first-item-img--green"
-          /></picture
-          >
-          <p class="modal__first-text modal__first-text--green">ice cream</p></a
-        >
-      </li>
-      <li class="modal__first-item">
-        <a href="">
-          <picture>
-            <source srcset="./images/buy-now-modal/ice-coffee.png 1x, ./images/buy-now-modal/ice-coffee-2x.png 2x">
-            <img
-            src="./images/buy-now-modal/ice-coffee.png"
-            alt="ice-coffee"
-            class="modal__first-item-img modal__first-item-img--orange"
-          /></picture>
-          <p class="modal__first-text modal__first-text--orange">ice coffee</p>
-        </a>
-      </li>
-      <li class="modal__first-item">
-        <a href="">
-          <picture>
-            <source srcset="./images/buy-now-modal/milkshake.png 1x, ./images/buy-now-modal/milkshake-2x.png 2x">
-            <img
-            src="./images/buy-now-modal/milkshake.png"
-            alt="milkshake"
-            class="modal__first-item-img modal__first-item-img--chocolate"
-          />
-          </picture>
-          
-          <p class="modal__first-text modal__first-text--chocolate">
-            milkshake
-          </p>
-        </a>
-      </li>
-    </ul>
-    <form class="modal__first-form">
-      <input
-        type="text"
-        id="name"
-        name="name"
-        class="modal__first-input"
-        placeholder="Name"
-        required
-        pattern="[A-za-z]*?"
-      />
+      <p class="modal__first-text modal__first-text--chocolate">milkshake</p>
+    </li>
+  </ul>
+  <form class="modal__first-form">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="modal__first-input"
+      placeholder="Name"
+      required
+      pattern="[A-za-z]*?"
+    />
 
-      <input
-        type="tel"
-        class="modal__first-input"
-        id="tel"
-        name="tel"
-        placeholder="Phone"
-        required
-        pattern="\+?[0-9\s\-\(\)]+"
-      />
+    <input
+      type="tel"
+      class="modal__first-input"
+      id="tel"
+      name="tel"
+      placeholder="Phone"
+      required
+      pattern="\+?[0-9\s\-\(\)]+"
+    />
 
-      <textarea
-        name="user-comment"
-        id="user-comment"
-        cols="30"
-        rows="10"
-        class="modal__first-textarea"
-        placeholder="Comment"
-      ></textarea>
+    <textarea
+      name="user-comment"
+      id="user-comment"
+      cols="30"
+      rows="10"
+      class="modal__first-textarea"
+      placeholder="Comment"
+    ></textarea>
 
-      <button type="submit" class="modal__btn-submit">Submit</button>
-    </form>
-  </div>
+    <button type="submit" class="modal__btn-submit">Submit</button>
+  </form>
 </div>

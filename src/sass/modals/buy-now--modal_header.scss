@@ -21,25 +21,23 @@
 
 // !потім додаємо клас active(тільки в CSS) щоб JS працював
 
-.modal.active,
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #84a178;
-  padding: 15px;
-  opacity: 0;
-  visibility: hidden;
-}
+// .overlay {
+//   opacity: 0;
+//   visibility: hidden;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #84a178;
+//   padding: 15px;
+//   z-index: 20;
+//   transition: 0.3s all;
+// }
 
 .modal__buy-now {
-  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
   width: 450px;
   max-height: 986px;
   background-color: #fcfcfc;
@@ -49,12 +47,19 @@
   transform: translate(-50%, -50%);
   padding: 28px;
   max-width: 100%;
-  opacity: 0;
-  visibility: hidden;
+  transition: 0.3s all;
+
   @include for-size(tablet) {
     width: 568px;
     min-height: 644px;
+    padding: 32px 54px;
   }
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .buy-now__modal-icon-close {
