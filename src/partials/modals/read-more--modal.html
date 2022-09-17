@@ -8,3 +8,29 @@
 <!-- До SVG додоєм клас *js-modal-close* -->
 
 <!-- при створенні оверлея додаєм йому клас *js-overlay-modal* -->
+<a href="#" class="js-open-modal" data-modal="read-more">Открыть окно 1</a>
+
+<div class="modal" data-modal="read-more">
+  <button class="modal__cross js-modal-close">
+    <svg width="16" height="16">
+      <use href="./images/svg/svg-sprite.svg#close-icon"></use>
+    </svg>
+  </button>
+  <p class="modal__title">How it’s made?</p>
+  <iframe
+    class="modal__video"
+    width="224"
+    height="199"
+    src="https://www.youtube.com/embed/AxPbPVVBAK8"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+  <p class="modal__text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+  </p>
+</div>
+<div class="overlay js-overlay-modal"></div>
