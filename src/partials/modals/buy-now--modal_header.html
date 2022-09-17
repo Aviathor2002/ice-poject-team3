@@ -8,3 +8,61 @@
 <!-- До SVG додоєм клас *js-modal-close* -->
 
 <!-- при створенні оверлея додаєм йому клас *js-overlay-modal* -->
+<div class="buy-now__modal-header">
+  <div class="modal__first">
+    <button type="button" class="buy-now__modal-icon-close">
+      <svg width="20" height="20">
+        <use href="./images/svg/svg-sprite.svg#close-icon"></use>
+      </svg>
+    </button>
+    <p class="modal__first-title">Buy now</p>
+
+    <ul class="modal__first-list">
+      <li class="modal__first-item">
+        <a href=""
+          ><img
+            src="/src/images/buy-now-modal/ice-cream.png"
+            alt="ice cream"
+            class="modal__first-item-img modal__first-item-img--green"
+          />
+          <p class="modal__first-text modal__first-text--green">ice cream</p></a
+        >
+      </li>
+      <li class="modal__first-item">
+        <a href="">
+          <img
+            src="/src/images/buy-now-modal/ice-coffee.png"
+            alt="ice-coffee"
+            class="modal__first-item-img modal__first-item-img--orange"
+          />
+          <p class="modal__first-text modal__first-text--orange">ice coffee</p>
+        </a>
+      </li>
+      <li class="modal__first-item">
+        <a href="">
+          <img
+            src="/src/images/buy-now-modal/milkshake.png"
+            alt="milkshake"
+            class="modal__first-item-img modal__first-item-img--chocolate"
+          />
+          <p class="modal__first-text modal__first-text--chocolate">
+            milkshake
+          </p>
+        </a>
+      </li>
+    </ul>
+    <form class="modal__first-form">
+      <input type="text" class="modal__first-input" placeholder="Name" />
+      <input type="tel" class="modal__first-input" placeholder="Phone" />
+      <textarea
+        name="user-comment"
+        id=""
+        cols="30"
+        rows="10"
+        class="modal__first-textarea"
+        placeholder="Comment"
+      ></textarea>
+      <button type="submit" class="modal__btn">Submit</button>
+    </form>
+  </div>
+</div>
