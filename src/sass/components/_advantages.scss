@@ -1,1 +1,39 @@
 // !Мазка Андрей
+.advantages {
+}
+.advantages__item {
+  margin-bottom: 25px;
+}
+.advantages__item--picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #f8d24e;
+  margin: 0 auto 16px;
+}
+.advantages__item--icon {
+}
+.advantages__item--index {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  margin-bottom: 18px;
+}
+.advantages__item--text {
+  width: 230px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+  color: #fcfcfc;
+  margin: 0 auto;
+}
