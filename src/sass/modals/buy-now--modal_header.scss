@@ -21,8 +21,241 @@
 
 // !потім додаємо клас active(тільки в CSS) щоб JS працював
 
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
+// .overlay {
+//   opacity: 0;
+//   visibility: hidden;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #84a178;
+//   padding: 15px;
+//   z-index: 20;
+//   transition: 0.3s all;
 // }
+
+.modal__buy-now {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 440px;
+  max-height: 986px;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 28px 28px;
+  max-width: 100%;
+  transition: 0.3s all;
+
+  @include for-size(tablet) {
+    width: 568px;
+    max-height: 644px;
+    padding: 32px 54px;
+  }
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.buy-now__modal-icon-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: none;
+  background-color: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: green;
+    border-radius: 50%;
+  }
+}
+
+.modal__first-title {
+  font-family: 'Seymour One';
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 83px;
+  @include for-size(tablet) {
+    margin-bottom: 100px;
+  }
+}
+
+.modal__first-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 20px;
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 32px;
+  }
+}
+
+.modal__first-item {
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+  display: inline-block;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.modal__first-item-img {
+  position: absolute;
+  top: -60px;
+  z-index: 1;
+
+  &.modal__first-item-img--green {
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+  }
+
+  &.modal__first-item-img--orange {
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+  }
+
+  &.modal__first-item-img--chocolate {
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+  }
+}
+
+.modal__first-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #131313;
+  &.modal__first-text--green {
+    border: 2px solid #96af8c;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+    border-radius: 16px;
+    border-top: transparent;
+    width: 132px;
+  }
+  &.modal__first-text--orange {
+    background: #efd478;
+    border: 2px solid #efd478;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+    border-radius: 16px;
+    border-top: transparent;
+    width: 132px;
+  }
+  &.modal__first-text--chocolate {
+    border: 2px solid #d6936d;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+    border-radius: 16px;
+    border-top: transparent;
+    width: 132px;
+  }
+}
+
+.modal__first-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__first-input {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 16px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.41;
+  }
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
+  }
+  @include for-size(tablet) {
+    width: 368px;
+    height: 42px;
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.42;
+    }
+  }
+}
+
+.modal__first-textarea {
+  width: 100%;
+  height: 65px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  resize: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.41;
+  }
+  @include for-size(tablet) {
+    width: 368px;
+    height: 84px;
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.42;
+    }
+  }
+}
+
+.modal__btn-submit {
+  position: relative;
+  width: 114px;
+  height: 42px;
+  background: #f8d24e;
+  border-radius: 10px;
+  border-color: transparent;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #131313;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: #96af8c;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  }
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
