@@ -21,24 +21,26 @@
 
 // !потім додаємо клас active(тільки в CSS) щоб JS працював
 
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
-.buy-now__modal-header {
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: #84a178;
+  padding: 15px;
   opacity: 0;
-  overflow: hidden;
+  visibility: hidden;
 }
 
-.modal__first {
-  position: absolute;
-  width: 280px;
+.modal__buy-now {
+  position: relative;
+  width: 450px;
   max-height: 986px;
   background-color: #fcfcfc;
   border-radius: 10px;
@@ -47,6 +49,8 @@
   transform: translate(-50%, -50%);
   padding: 28px;
   max-width: 100%;
+  opacity: 0;
+  visibility: hidden;
   @include for-size(tablet) {
     width: 568px;
     min-height: 644px;
@@ -84,6 +88,7 @@
   flex-direction: column;
   align-items: center;
   gap: 60px;
+  margin-bottom: 20px;
   @include for-size(tablet) {
     display: flex;
     flex-direction: row;
@@ -97,31 +102,18 @@
   position: relative;
   cursor: pointer;
   max-width: 100%;
-}
-
-.modal__first-item {
-  & a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(rgb(255, 255, 255), 0.25);
-    color: rgb(0, 0, 0);
-    float: left;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.5s ease;
+  display: inline-block;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:last-child {
+    margin-bottom: 0;
   }
-  & a:hover {
-    background-color: rgb(80, 80, 80);
-    color: beige;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
   }
-}
-
-.active a {
-  background-color: rgb(77, 32, 32);
-  color: #fff;
-  transform: scale(1.2);
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .modal__first-item-img {
@@ -187,17 +179,20 @@
 }
 
 .modal__first-input {
-  width: 224px;
+  width: 100%;
   height: 32px;
   margin-bottom: 16px;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
   border-radius: 10px;
   padding-left: 10px;
-  max-width: 100%;
+  padding-right: 10px;
   &::placeholder {
     font-size: 12px;
     line-height: 1.41;
+  }
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
   }
   @include for-size(tablet) {
     width: 368px;
@@ -210,7 +205,7 @@
 }
 
 .modal__first-textarea {
-  width: 224px;
+  width: 100%;
   height: 65px;
   background: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
@@ -218,7 +213,7 @@
   margin-bottom: 25px;
   resize: none;
   padding-left: 10px;
-  max-width: 100%;
+  padding-right: 10px;
   &::placeholder {
     font-size: 12px;
     line-height: 1.41;
@@ -233,13 +228,13 @@
   }
 }
 
-.modal__btn {
+.modal__btn-submit {
+  position: relative;
   width: 114px;
   height: 42px;
   background: #f8d24e;
   border-radius: 10px;
   border-color: transparent;
-  overflow: hidden;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
@@ -247,6 +242,13 @@
   line-height: 1.25;
   color: #131313;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: #96af8c;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  }
   @include for-size(tablet) {
     font-size: 14px;
     line-height: 1.21;

@@ -8,9 +8,12 @@
 <!-- До SVG додоєм клас *js-modal-close* -->
 
 <!-- при створенні оверлея додаєм йому клас *js-overlay-modal* -->
-<div class="buy-now__modal-header">
-  <div class="modal__first">
-    <button type="button" class="buy-now__modal-icon-close">
+<button type="button" class="js-open-modal" data-modal="modal__buy-now">
+  modal buy-now
+</button>
+<div class="overlay js-overlay-modal">
+  <div class="modal__buy-now" data-modal="modal__buy-now">
+    <button type="button" class="buy-now__modal-icon-close js-modal-close">
       <svg width="20" height="20">
         <use href="./images/svg/svg-sprite.svg#close-icon"></use>
       </svg>
@@ -52,17 +55,36 @@
       </li>
     </ul>
     <form class="modal__first-form">
-      <input type="text" class="modal__first-input" placeholder="Name" />
-      <input type="tel" class="modal__first-input" placeholder="Phone" />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="modal__first-input"
+        placeholder="Name"
+        required
+        pattern="[A-za-z]*?"
+      />
+
+      <input
+        type="tel"
+        class="modal__first-input"
+        id="tel"
+        name="tel"
+        placeholder="Phone"
+        required
+        pattern="\+?[0-9\s\-\(\)]+"
+      />
+
       <textarea
         name="user-comment"
-        id=""
+        id="user-comment"
         cols="30"
         rows="10"
         class="modal__first-textarea"
         placeholder="Comment"
       ></textarea>
-      <button type="submit" class="modal__btn">Submit</button>
+
+      <button type="submit" class="modal__btn-submit">Submit</button>
     </form>
   </div>
 </div>
