@@ -1,1 +1,133 @@
 // !Сергей Машкоф
+.products {
+  background-color: #ffffff;
+  background-image: url(../images/products/ice-background1.png);
+}
+.section {
+}
+.products {
+}
+.сontainer {
+}
+.products__pre-title {
+  font-family: 'Montserrat';
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.22;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #131313;
+
+  margin-bottom: 12px;
+  margin-bottom: 12px;
+}
+.products__title {
+  font-family: 'Seymour One';
+
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.27;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #131313;
+
+  margin-bottom: 148px;
+}
+.title {
+}
+.products-list {
+}
+.list {
+}
+.products-list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #aec6a5;
+
+  width: 280px;
+  // width: calc(33% - 30px) / 3;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  &:nth-child(2) {
+    background-color: #efd478;
+  }
+  &:nth-child(3) {
+    background-color: #d6936d;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  margin: 0 auto;
+  margin-bottom: 164px;
+}
+
+.products-list__img {
+  position: absolute;
+  z-index: 4;
+  top: 100px;
+
+  width: 200px;
+  height: 200px;
+
+  left: 0;
+  right: 0;
+  background-image: url();
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.products-list__title {
+  font-family: 'Montserrat';
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #131313;
+
+  margin-bottom: 40px;
+  margin-top: 123px;
+}
+.products-list__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 176%;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #131313;
+
+  margin-bottom: 90px;
+  color: #131313;
+}
+.products-list__button {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  margin-bottom: 20px;
+}
+.products-list__icon {
+}
