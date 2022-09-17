@@ -1,33 +1,7 @@
 // !Larysa Furmanchuk
 
-// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
 
-// .overlay {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//інші стилі
-
-// }
-
-// .modal {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//   інші стилі
-// }
-
-// !потім додаємо клас active(тільки в CSS) щоб JS працював
-
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
-
-.overlay {
+.read-more-overlay {
     opacity: 0;
     visibility: hidden;
 
@@ -38,17 +12,18 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
     z-index: 20;
-    transition: .3s all;
+    transition: $cubic-bezier all;
 }
 
-.modal {
+.read-more-modal {
     opacity: 0;
     visibility: hidden;
 
-    min-width: 280px;
-    height: 459px;
+    width: calc(100% - 20px);
+    max-width: 280px;
+    min-height: 459px;
        
-    position: fixed;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -61,22 +36,22 @@
     border: 2px solid $primary-default-button-color;
     border-radius: 10px;
    
-    transition: 0.3s all;
+    transition: $cubic-bezier all;
 
     @include for-size(tablet) {
-        width: 568px;
+        max-width: 568px;
         height: 449px;
         padding: 32px 60px;
     }
 }
 
 .modal.active,
-.overlay.active {
+.read-more-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-.modal__cross {
+.read-more-modal__cross {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -91,7 +66,7 @@
     background-color: #fff;
 }
 
-.modal__title {
+.read-more-modal__title {
     font-family: 'Seymour One';
     font-size: 16px;
     line-height: 1.5;
@@ -103,7 +78,7 @@
     }
 }
 
-.modal__video {
+.read-more-modal__video {
     min-height: 199px;
     width: 100%;
     margin-bottom: 20px;
@@ -114,11 +89,11 @@
     }
 }
 
-.modal__text {
+.read-more-modal__text {
     font-size: 14px;
     line-height: 1.4;
     text-align: left;
-    color:$primary-text-color;
+    color: $primary-text-color;
     @include for-size(tablet) {
         font-size: 16px;
         line-height: 1.4;
