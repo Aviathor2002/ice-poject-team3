@@ -21,7 +21,7 @@
 
 // !потім додаємо клас active(тільки в CSS) щоб JS працював
 
-.modal.active,
+.modal__buy-now.active,
 .overlay.active {
   opacity: 1;
   visibility: visible;
