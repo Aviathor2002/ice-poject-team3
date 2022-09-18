@@ -2,24 +2,39 @@
 .about {
   padding-bottom: 0px;
   @include for-size(desktop) {
+    padding-bottom: 60px;
   }
 }
-.about__title {
+.about__pretitle {
   @extend %pre-title;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
   color: #fcfcfc;
   padding: 0 auto;
   margin-bottom: 12px;
+  @include for-size(tablet) {
+    font-weight: 800;
+    font-size: 22px;
+  }
+  @include for-size(desktop) {
+    font-size: 30px;
+  }
 }
-.about__title--part {
+.about__title {
   @extend %title;
+  font-size: 30px;
   color: #fcfcfc;
   width: 200px;
   margin: 0 auto 32px;
   @include for-size(tablet) {
     width: 100%;
-    margin-bottom: 72px;
+    margin-bottom: 79px;
+    font-size: 34px;
   }
   @include for-size(desktop) {
+    font-size: 36px;
+    margin-bottom: 172px;
   }
 }
 .about__picture {
@@ -27,13 +42,28 @@
   justify-content: center;
   margin-bottom: 40px;
   @include for-size(tablet) {
+    position: absolute;
+    top: 200;
+    left: 12;
   }
   @include for-size(desktop) {
+    top: 220;
+    left: 12;
+    width: 500px;
+    height: auto;
   }
 }
-.about__text {
-  display: flex;
-  flex-direction: column;
+.about__article {
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    max-width: 336px;
+    margin-left: auto;
+  }
+  @include for-size(desktop) {
+    max-width: 463px;
+    margin-left: 616px;
+  }
 }
 .about__text {
   font-size: 12px;
@@ -41,18 +71,34 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: #fcfcfc;
-  width: 220px;
+  max-width: 220px;
   margin: 0 auto 4px;
+  @include for-size(tablet) {
+    max-width: 100%;
+    margin: 0 0 8px;
+    text-align: start;
+  }
+  @include for-size(desktop) {
+    font-size: 16px;
+  }
 }
 .about__text--low {
   line-height: 1.62;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
   @include for-size(tablet) {
     display: flex;
+    margin-bottom: 8px;
+  }
+  @include for-size(desktop) {
+    font-size: 14px;
   }
 }
 .about__text--tab {
   display: none;
+  @include for-size(tablet) {
+    display: flex;
+    margin-bottom: 48px;
+  }
 }
 .about__button {
   display: block;
@@ -78,6 +124,9 @@
     background-color: #0a8817;
     color: #fcfcfc;
     fill: #fcfcfc;
+  }
+  @include for-size(tablet) {
+    margin: 0 0 53px;
   }
 }
 .about__button--icon {

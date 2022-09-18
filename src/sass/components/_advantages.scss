@@ -1,9 +1,29 @@
 // !Мазка Андрей
 .advantages {
   padding-top: 48px;
-  @include for-size(desktop) {
+  @include for-size(tablet) {
     padding-top: 0px;
   }
+  @include for-size(desktop) {
+    padding-top: 60px;
+  }
+}
+.advantages__title {
+  @extend %pre-title;
+  color: #fcfcfc;
+  margin-bottom: 12px;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 .advantages__list {
   @include for-size(tablet) {
@@ -13,10 +33,10 @@
 }
 .advantages__item {
   @include for-size(tablet) {
-    width: 152px;
+    max-width: 152px;
   }
   @include for-size(desktop) {
-    width: 368px;
+    max-width: 368px;
     margin-bottom: 40px;
   }
 }
