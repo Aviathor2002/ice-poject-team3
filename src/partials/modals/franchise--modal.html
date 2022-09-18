@@ -9,17 +9,16 @@
 
 <!-- при створенні оверлея додаєм йому клас *js-overlay-modal* -->
 
-<div class="modal">
-  <button type="submit" class="modal-close">
-    X
-    <!-- <svg class="modal-icon" width="16" height="16">
-          <use href="./img/close.svg#icon-close"></use>
-        </svg> -->
+<div class="franchise-modal" data-modal="franchise">
+  <button type="submit" class="franchise-modal__close js-modal-close">
+    <svg width="16" height="16">
+      <use href="./images/svg/svg-sprite.svg#close-icon"></use>
+    </svg>
   </button>
-  <h2 class="modal__title">
+  <h3 class="franchise-modal__title">
     Thank you for your interest in owning an Ice Cream shop
-  </h2>
-  <p class="modal__pretitle">
+  </h3>
+  <p class="franchise-modal__pretitle">
     Due to the overwhelming volume of franchise requests we are not accepting
     new franchisee applications at this time. Once the application process
     resumes, we will contact you for further information. Please fill out the
@@ -27,12 +26,12 @@
     We appreciate your patience.
   </p>
 
-  <div class="modal__form">
-    <form action="">
-      <div class="input-field">
+  <div class="franchise-modal__form">
+    <form>
+      <div class="form">
         <input
           type="text"
-          class="form-input"
+          class="form__input"
           name="user-name"
           placeholder="Name"
           required
@@ -41,7 +40,7 @@
 
         <input
           type="tel"
-          class="form-input"
+          class="form__input"
           name="user-tel"
           placeholder="Phone"
           required
@@ -51,7 +50,7 @@
 
         <input
           type="email"
-          class="form-input"
+          class="form__input"
           name="user-email"
           placeholder="Email"
           required
@@ -59,13 +58,14 @@
         />
 
         <textarea
-          name="user-coment"
+          name="input-coment"
           id="user-coment"
-          class="form-input-coment"
+          class="form__coment"
           placeholder="Comment"
         ></textarea>
       </div>
-      <button type="submit" class="input-btn">Submit</button>
+      <button type="submit" class="form__btn">Submit</button>
     </form>
   </div>
 </div>
+<div class="overlay js-overlay-modal"></div>
