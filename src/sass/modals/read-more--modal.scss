@@ -31,8 +31,8 @@
   opacity: 0;
   visibility: hidden;
 
-  min-width: 280px;
-  height: 459px;
+  width: calc(100% - 20px);
+  max-width: 400px;
 
   position: fixed;
   top: 50%;
@@ -47,10 +47,10 @@
   border: 2px solid $primary-default-button-color;
   border-radius: 10px;
 
-  transition: 0.3s all;
+  transition: $cubic-bezier all;
 
   @include for-size(tablet) {
-    width: 568px;
+    max-width: 568px;
     height: 449px;
     padding: 32px 60px;
   }
@@ -95,7 +95,6 @@
   margin-bottom: 20px;
 
   @include for-size(tablet) {
-    width: 100%;
     margin-bottom: 32px;
   }
 }
