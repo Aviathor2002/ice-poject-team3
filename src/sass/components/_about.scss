@@ -1,10 +1,21 @@
 // !Мазка Андрей
 .about {
   padding-bottom: 0px;
+  @include for-size(tablet) {
+    margin-bottom: 52px;
+  }
   @include for-size(desktop) {
     padding-bottom: 60px;
   }
 }
+
+.about__container {
+  @include for-size(tablet) {
+    position: relative;
+    display: flex;
+  }
+}
+
 .about__pretitle {
   @extend %pre-title;
   font-weight: 700;
@@ -37,18 +48,21 @@
     margin-bottom: 172px;
   }
 }
+
 .about__picture {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+  @include for-size(mobile-only) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
   @include for-size(tablet) {
     position: absolute;
-    top: 200;
-    left: 12;
+    bottom: 0;
+    left: -20px;
   }
   @include for-size(desktop) {
-    top: 220;
-    left: 12;
+    bottom: -80px;
+    left: -50px;
     width: 500px;
     height: auto;
   }
@@ -126,7 +140,6 @@
     fill: #fcfcfc;
   }
   @include for-size(tablet) {
-    margin: 0 0 53px;
   }
 }
 .about__button--icon {
