@@ -1,34 +1,33 @@
 <!-- !Larysa Furmanchuk -->
 
 <a href="#" class="js-open-modal" data-modal="our-location">Открыть окно 2</a>
-<div class="modal--padding">
-  <div class="our-location-modal modal" data-modal="our-location">
-    <button class="our-location-modal__cross js-modal-close">
-      <svg width="16" height="16">
-        <use href="./images/svg/svg-sprite.svg#close-icon"></use>
-      </svg>
-    </button>
-    <p class="our-location-modal__title">Our Locations</p>
 
-    <picture class="our-location-modal__img">
-      <source
-        srcset="
-          ./images/location/Rectangle.png    1x,
-          ./images/location/Rectangle-2x.png 2x
-        "
-        media="(min-width:768px)"
-      />
-      <source
-        srcset="
-          ./images/location/Rectangle-mob.png    1x,
-          ./images/location/Rectangle-mob-2x.png 2x
-        "
-      />
-      <img src="./images/location/Rectangle.png" alt="Map" width="448" />
-    </picture>
+<div class="our-location-modal modal" data-modal="our-location">
+  <button class="our-location-modal__cross js-modal-close">
+    <svg width="16" height="16">
+      <use href="./images/svg/svg-sprite.svg#close-icon"></use>
+    </svg>
+  </button>
+  <p class="our-location-modal__title">Our Locations</p>
 
-    <a href="https://goo.gl/maps/Z5zKXt3kABUWnhfi7" class="location-button"
-      >Open map</a
-    >
-  </div>
+  <picture class="our-location-modal__img">
+    <source
+      srcset="
+        ./images/location/Rectangle.png    1x,
+        ./images/location/Rectangle-2x.png 2x
+      "
+      media="(min-width:768px)"
+    />
+    <source
+      srcset="
+        ./images/location/Rectangle-mob.png    1x,
+        ./images/location/Rectangle-mob-2x.png 2x
+      "
+    />
+    <img src="./images/location/Rectangle.png" alt="Map" width="448" />
+  </picture>
+
+  <a href="https://goo.gl/maps/Z5zKXt3kABUWnhfi7" class="location-button"
+    >Open map</a
+  >
 </div>

@@ -18,7 +18,7 @@
   opacity: 0;
   visibility: hidden;
 
-  width: calc(100% - 20px);
+  width: calc(100% - 40px);
   max-width: 400px;
 
   position: fixed;
@@ -93,6 +93,9 @@
   color: #131313;
   width: 134px;
   height: 42px;
+
+  display: block;
+  margin: 0 auto;
 
   padding: 12px 34px;
   text-align: center;
