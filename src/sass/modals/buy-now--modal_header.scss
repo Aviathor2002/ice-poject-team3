@@ -75,7 +75,7 @@
   top: 20px;
   border: none;
   background-color: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms $cubic-bezier;
   cursor: pointer;
   &:hover,
   &:focus {
@@ -115,7 +115,7 @@
   cursor: pointer;
   max-width: 100%;
   display: inline-block;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms $cubic-bezier;
   &:last-child {
     margin-bottom: 0;
   }
@@ -254,8 +254,7 @@
   line-height: 1.25;
   color: #131313;
   cursor: pointer;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms $cubic-bezier, box-shadow 250ms $cubic-bezier;
   &:hover,
   &:focus {
     border-color: #96af8c;
