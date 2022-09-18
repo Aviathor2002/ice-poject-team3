@@ -11,6 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
+  transition: $cubic-bezier all;
 
   width: calc(100% - 40px);
   max-width: 400px;
@@ -43,6 +44,12 @@
   @include for-size(tablet) {
     right: 20px;
     top: 20px;
+  }
+  transition: fill 250ms $cubic-bezier;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: green;
   }
 }
 
@@ -81,7 +88,7 @@
 .form {
   margin-bottom: 24px;
   @include for-size(tablet) {
-    width: 322px;
+    width: 368px;
     margin: 0 auto;
     margin-bottom: 32px;
   }
@@ -104,6 +111,9 @@
     height: 42px;
   }
 }
+.form__input:not(:placeholder-shown):required:invalid {
+  border-color: red;
+}
 
 .form__coment {
   width: 100%;
@@ -112,7 +122,6 @@
   border: 1px solid $primary-background-color;
   border-radius: 10px;
   padding-left: 12px;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.42;
   color: $primary-text-color;
@@ -122,12 +131,12 @@
     min-height: 84px;
     font-size: 14px;
     line-height: 1.43;
+    padding-left: 0 16px;
   }
 }
 
 input::placeholder,
 textarea::placeholder {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.42;
   color: $primary-text-color;
