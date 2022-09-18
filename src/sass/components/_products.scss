@@ -1,13 +1,16 @@
 // !Сергей Машкоф
 .products {
-  background-color: #ffffff;
-  background-image: url(../images/products/ice-background1.png);
+  padding: 120px 0;
+  background: #f5f5f5;
 }
 .section {
+  padding: 0;
 }
-.products {
-}
+
 .сontainer {
+  background-image: url(../images/products/bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .products__pre-title {
   font-family: 'Montserrat';
@@ -22,7 +25,7 @@
   color: #131313;
 
   margin-bottom: 12px;
-  margin-bottom: 12px;
+  padding-top: 60px;
 }
 .products__title {
   font-family: 'Seymour One';
@@ -42,6 +45,10 @@
 .title {
 }
 .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // gap: 164px 32px;
 }
 .list {
 }
@@ -57,6 +64,7 @@
   // width: calc(33% - 30px) / 3;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+
   &:nth-child(2) {
     background-color: #efd478;
   }
@@ -65,7 +73,7 @@
   }
 
   &:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 60px;
   }
   margin: 0 auto;
   margin-bottom: 164px;
@@ -81,7 +89,7 @@
 
   left: 0;
   right: 0;
-  background-image: url();
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,6 +118,9 @@
   font-size: 14px;
   line-height: 176%;
 
+  max-width: 200px;
+  height: 124px;
+
   text-align: center;
   letter-spacing: 0.04em;
 
@@ -128,6 +139,33 @@
   cursor: pointer;
 
   margin-bottom: 20px;
+
+  &:hover .products-list__icon {
+    width: 50px;
+    height: 16px;
+  }
+  &:focus .products-list__icon {
+    width: 50px;
+    stroke: black;
+    stroke-width: 1px;
+    height: 20px;
+  }
 }
+
 .products-list__icon {
+}
+
+.icecream {
+  position: absolute;
+  top: -100px;
+}
+
+.icecoffe {
+  position: absolute;
+  top: -100px;
+}
+
+.milk {
+  position: absolute;
+  top: -100px;
 }
