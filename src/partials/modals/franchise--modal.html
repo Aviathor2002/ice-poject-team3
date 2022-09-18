@@ -33,21 +33,22 @@
       <div class="form">
         <input
           type="text"
+          id="name"
+          name="name"
           class="form__input"
-          name="user-name"
           placeholder="Name"
           required
-          id="user-name"
+          pattern="[A-za-z]*?"
         />
 
         <input
           type="tel"
           class="form__input"
-          name="user-tel"
+          id="tel"
+          name="tel"
           placeholder="Phone"
           required
-          minlength="10"
-          id="user-tel"
+          pattern="\+?[0-9\s\-\(\)]+"
         />
 
         <input
