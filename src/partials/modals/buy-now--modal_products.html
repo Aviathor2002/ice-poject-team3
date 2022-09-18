@@ -99,3 +99,191 @@
     <button type="submit" class="modal__btn-submit">Submit</button>
   </form>
 </div>
+
+<button
+  type="button"
+  class="js-open-modal"
+  data-modal="products__modal-ice-coffee"
+>
+  ice coffee modal
+</button>
+<div
+  class="products__modal-ice-coffee modal products__modal"
+  data-modal="products__modal-ice-coffee"
+>
+  <button type="button" class="products__modal-icon-close js-modal-close">
+    <svg width="20" height="20">
+      <use href="./images/svg/svg-sprite.svg#close-icon"></use>
+    </svg>
+  </button>
+  <p class="products__modal-title">Ice coffee</p>
+  <picture class="products__modal-img">
+    <source
+      srcset="
+        ./images/modal-ingredients/ice-coffee-product.png    1x,
+        ./images/modal-ingredients/ice-coffee-product-2x.png 2x
+      "
+    />
+    <img
+      src="./images/modal-ingredients/ice-coffee-product.png"
+      alt="ice cream"
+    />
+  </picture>
+  <ul class="product__list">
+    <li class="product__list-item">
+      <p class="product-list-text">242</p>
+      <p class="product-list-text--bottom">kcal</p>
+    </li>
+    <li class="product__list-item">
+      <p class="product-list-text">9g</p>
+      <p class="product-list-text--bottom">Prote...</p>
+    </li>
+    <li class="product__list-item">
+      <p class="product-list-text">8g</p>
+      <p class="product-list-text--bottom">Fats</p>
+    </li>
+    <li class="product__list-item">
+      <p class="product-list-text">34g</p>
+      <p class="product-list-text--bottom">Carbs</p>
+    </li>
+  </ul>
+  <p class="ingredients__title">Ingredients</p>
+  <ul class="ingredients__title-list">
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Milk <span>100ml</span></p>
+    </li>
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Instant coffee <span>6g</span></p>
+    </li>
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Ice <span>by taste</span></p>
+    </li>
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Sugar <span>21g</span></p>
+    </li>
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Water <span>75ml</span></p>
+    </li>
+  </ul>
+  <form class="modal__first-form">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="modal__first-input"
+      placeholder="Name"
+      required
+      pattern="[A-za-z]*?"
+    />
+    <input
+      type="tel"
+      class="modal__first-input"
+      id="tel"
+      name="tel"
+      placeholder="Phone"
+      required
+      pattern="\+?[0-9\s\-\(\)]+"
+    />
+    <textarea
+      name="user-comment"
+      id="user-comment"
+      cols="30"
+      rows="10"
+      class="modal__first-textarea modal__first-textarea--margin-bottom"
+      placeholder="Comment"
+    ></textarea>
+    <button type="submit" class="modal__btn-submit">Submit</button>
+  </form>
+</div>
+
+<button
+  type="button"
+  class="js-open-modal"
+  data-modal="products__modal-milkshakes"
+>
+  milkshakes modal
+</button>
+<div
+  class="products__modal-milkshakes modal products__modal"
+  data-modal="products__modal-milkshakes"
+>
+  <button type="button" class="products__modal-icon-close js-modal-close">
+    <svg width="20" height="20">
+      <use href="./images/svg/svg-sprite.svg#close-icon"></use>
+    </svg>
+  </button>
+  <p class="products__modal-title">Milkshakes</p>
+  <picture class="products__modal-img">
+    <source
+      srcset="
+        ./images/modal-ingredients/milkshakes.png    1x,
+        ./images/modal-ingredients/milkshakes-2x.png 2x
+      "
+    />
+    <img src="./images/modal-ingredients/milkshakes.png" alt="ice cream" />
+  </picture>
+  <ul class="product__list">
+    <li class="product__list-item">
+      <p class="product-list-text">343</p>
+      <p class="product-list-text--bottom">kcal</p>
+    </li>
+    <li class="product__list-item">
+      <p class="product-list-text">5g</p>
+      <p class="product-list-text--bottom">Prote...</p>
+    </li>
+    <li class="product__list-item">
+      <p class="product-list-text">7g</p>
+      <p class="product-list-text--bottom">Fats</p>
+    </li>
+    <li class="product__list-item">
+      <p class="product-list-text">68g</p>
+      <p class="product-list-text--bottom">Carbs</p>
+    </li>
+  </ul>
+  <p class="ingredients__title">Ingredients</p>
+  <ul class="ingredients__title-list">
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Milk <span>50ml</span></p>
+    </li>
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">
+        Chocolate ice cream <span>216g</span>
+      </p>
+    </li>
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Chocolate syrup <span>45ml</span></p>
+    </li>
+    <li class="ingredients__title-item">
+      <p class="ingredients__title-text">Mint extract <span>1ml</span></p>
+    </li>
+  </ul>
+  <form class="modal__first-form">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      class="modal__first-input"
+      placeholder="Name"
+      required
+      pattern="[A-za-z]*?"
+    />
+    <input
+      type="tel"
+      class="modal__first-input"
+      id="tel"
+      name="tel"
+      placeholder="Phone"
+      required
+      pattern="\+?[0-9\s\-\(\)]+"
+    />
+    <textarea
+      name="user-comment"
+      id="user-comment"
+      cols="30"
+      rows="10"
+      class="modal__first-textarea modal__first-textarea--margin-bottom"
+      placeholder="Comment"
+    ></textarea>
+    <button type="submit" class="modal__btn-submit">Submit</button>
+  </form>
+</div>
