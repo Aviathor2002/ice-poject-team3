@@ -1,4 +1,9 @@
 // !Мазка Андрей
+.about {
+  padding-bottom: 0px;
+  @include for-size(desktop) {
+  }
+}
 .about__title {
   @extend %pre-title;
   color: #fcfcfc;
@@ -30,7 +35,7 @@
   display: flex;
   flex-direction: column;
 }
-.about__text--high {
+.about__text {
   font-size: 12px;
   line-height: 1.76;
   text-align: center;
@@ -40,12 +45,14 @@
   margin: 0 auto 4px;
 }
 .about__text--low {
-  font-size: 12px;
   line-height: 1.62;
-  text-align: center;
-  color: #fcfcfc;
-  width: 220px;
   margin: 0 auto 20px;
+  @include for-size(tablet) {
+    display: flex;
+  }
+}
+.about__text--tab {
+  display: none;
 }
 .about__button {
   display: block;
@@ -63,7 +70,7 @@
   cursor: pointer;
   border-radius: 10px;
   border: none;
-  margin: 0 auto 42px;
+  margin: 0 auto;
   &:hover {
     background-color: #0a8817;
   }

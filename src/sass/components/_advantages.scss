@@ -1,20 +1,66 @@
 // !Мазка Андрей
 .advantages {
+  padding-top: 48px;
+  @include for-size(desktop) {
+    padding-top: 0px;
+  }
+}
+.advantages__list {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .advantages__item {
-  margin-bottom: 25px;
+  @include for-size(tablet) {
+    width: 152px;
+  }
+  @include for-size(desktop) {
+    width: 368px;
+    margin-bottom: 40px;
+  }
 }
-.advantages__item--picture {
+.advantages__item--cow::before {
+  content: '';
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: #f8d24e;
   margin: 0 auto 16px;
+  background-image: url('../images/cow-1x.png');
+  background-size: 50px 50px;
+  @include for-size(retina) {
+    background-image: url('../images/cow-2x.png');
+  }
 }
-.advantages__item--icon {
+.advantages__item--weight::before {
+  content: '';
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  background-image: url('../images/weight-1x.png');
+  background-size: 50px 50px;
+  @include for-size(retina) {
+    background-image: url('../images/weight-2x.png');
+  }
+}
+.advantages__item--icecrema::before {
+  content: '';
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  background-image: url('../images/ice crema-1x.png');
+  background-size: 50px 50px;
+  @include for-size(retina) {
+    background-image: url('../images/ice crema-2x.png');
+  }
+}
+.advantages__item:not(:last-child) {
+  margin-bottom: 25px;
+  @include for-size(tablet) {
+    margin-bottom: 0px;
+  }
 }
 .advantages__item--index {
   font-family: 'Roboto';
@@ -27,6 +73,11 @@
   text-transform: uppercase;
   color: #fcfcfc;
   margin-bottom: 18px;
+  @include for-size(tablet) {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    line-height: 1.23;
+  }
 }
 .advantages__item--text {
   width: 230px;
@@ -36,4 +87,14 @@
   text-align: center;
   color: #fcfcfc;
   margin: 0 auto;
+  @include for-size(tablet) {
+    width: 100%;
+    font-size: 14px;
+  }
+  @include for-size(desktop) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.76;
+    padding: 0 5px;
+  }
 }
