@@ -1,1 +1,54 @@
 // !Чайка Антон
+.footer {
+}
+
+.footer__subtitle {
+  margin-bottom: 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+}
+
+.social-list {
+}
+
+.cosial-list__item {
+}
+
+.social-list__link {
+}
+
+.social-list__icon {
+}
+
+.footer__text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 186%;
+  /* identical to box height, or 22px */
+
+  text-align: right;
+
+  color: #131313;
+}
+
+.footer__phone {
+  color: #fcfcfc;
+}
+
+.footer__rights {
+}
