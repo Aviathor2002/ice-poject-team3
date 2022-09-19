@@ -1,44 +1,142 @@
 // !Іщук Віталій
 .section-padding {
-  padding-top: 12px;
+  padding-top: 1px;
   padding-bottom: 0;
   background: #84a178;
 }
-// .header {
-//   padding-left: 0;
-//   padding-right: 0;
-//   //   position: relative;
-// }
+.header {
+  position: relative;
+
+  //   padding-left: 0;
+  //   padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @include for-size(tablet) {
+    height: 100%;
+    max-width: 768px;
+  }
+
+  @include for-size(desktop) {
+    height: 100%;
+    max-width: 1200px;
+  }
+}
 .header__mob {
-  //   position: fixed;
-  //   align-items: flex-start;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   //   margin-left: 23px;
-  //   margin-top: 12px;
+  margin-top: 12px;
   //   margin-right: 26px;
 }
+.header-navigation {
+  display: none;
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+.header-navigation__list {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fcfcfc;
+  &:hover,
+  &:focus {
+    color: #f8d24e;
+  }
+}
+.header-navigation__list:not(:last-child) {
+  margin-right: 27px;
+}
 
-// .header--icon {
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-// }
+.header-navigation__link {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+
+  color: #fcfcfc;
+  &:hover,
+  &:focus {
+    color: #f8d24e;
+  }
+}
+
+.header__icon--logo {
+  // position: absolute;
+  // left: 20px;
+  // top: 12px;
+  fill: rgba(248, 210, 78, 1);
+  @include for-size(desktop) {
+    width: 56px;
+    height: 60px;
+  }
+}
 .header-open {
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
+  // position: absolute;
+  // top: 26px;
+  // right: 26px;
+  // top: 16px;
+  // right: 20px;
   background: transparent;
   color: #f8d24e;
   border-color: transparent;
+  @include for-size(desktop) {
+    display: none;
+  }
 }
 
+.header__btr {
+  display: flex;
+}
+.header__btr--buy {
+  display: none;
+
+  @include for-size(tablet) {
+    display: block;
+    width: 152px;
+    height: 42px;
+    background: #f8d24e;
+    border-color: transparent;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #131313;
+  }
+}
+
+.header__icon--close {
+  background-color: transparent;
+  border-color: transparent;
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  fill: rgba(252, 252, 252, 1);
+}
 .navigation__list:not(:last-child) {
   margin-bottom: 32px;
+  @include for-size(tablet-only) {
+    margin-bottom: 40px;
+  }
 }
 
 .mob--nenu {
+  //   max-width: 320px;
+  //   min-height: 568px;
   z-index: 5;
 
   position: fixed;
@@ -50,7 +148,12 @@
   //   flex-direction: column;
   //   justify-content: space-between;
   background: #84a178;
-  transform: translatey(-100%);
+  transform: translatey(-150%);
+  @include for-size(tablet-only) {
+    background: #aec6a5;
+    font-size: 48px;
+    line-height: 59px;
+  }
 }
 .activ {
   transform: translatey(0);
@@ -59,11 +162,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
 }
 .navigation {
-  margin-top: 50px;
+  margin-top: 100px;
   align-items: center;
   text-align: center;
+  @include for-size(tablet-only) {
+    margin-top: 140px;
+  }
 }
 .navigation__link {
   font-family: 'Montserrat';
@@ -77,6 +186,28 @@
     color: #131313;
   }
 }
+
+.hero {
+  padding: 0;
+  position: relative;
+  min-height: 502px;
+  margin-left: auto;
+  margin-right: auto;
+  @include for-size(tablet) {
+    height: 100%;
+    max-width: 768px;
+  }
+
+  @include for-size(desktop) {
+    height: 100%;
+    max-width: 1200px;
+  }
+}
+.hero__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header__buy {
   margin-top: 110px;
   margin-left: calc(50% - 76px);
@@ -84,6 +215,7 @@
   height: 42px;
   background: #f8d24e;
   border-radius: 10px;
+  border-color: transparent;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
@@ -94,6 +226,9 @@
   text-align: center;
   justify-content: center;
   color: #131313;
+  @include for-size(tablet) {
+    display: none;
+  }
 }
 .menu--icon {
   color: #f8d24e;
@@ -101,7 +236,9 @@
 }
 
 .hero__text {
-  margin-top: 110px;
+  max-width: 250px;
+  padding-top: 110px;
+  margin-left: 20px;
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
@@ -110,14 +247,42 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #fcfcfc;
+  @include for-size(tablet) {
+    padding-top: 104px;
+
+    max-width: 180px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  @include for-size(desktop) {
+    padding-top: 118px;
+    max-width: 367px;
+    font-size: 38px;
+    line-height: 48px;
+  }
+}
+.hero__text--span {
+  @include for-size(tablet-only) {
+    font-size: 16px;
+    line-height: 13px;
+  }
 }
 
 .hero__info {
+  margin-left: 20px;
   display: flex;
   margin-top: 32px;
+  @include for-size(tablet) {
+    margin-top: 20px;
+  }
+  @include for-size(desktop) {
+    margin-top: 28px;
+  }
 }
 
 .hero__button {
+  width: 62px;
+  height: 24px;
   border: 2px solid #f8d24e;
   border-radius: 8px;
 
@@ -127,11 +292,17 @@
   font-size: 8px;
   line-height: 10px;
   background-color: transparent;
-  //   display: flex;
-  //   align-items: center;
-  //   text-align: center;
 
   color: #131313;
+
+  @include for-size(desktop) {
+    width: 134px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 1.29;
+    align-items: center;
+    text-align: center;
+  }
 }
 .hero__link {
   margin-left: 6px;
@@ -145,18 +316,154 @@
   text-align: center;
   text-decoration-line: underline;
   color: #f8d24e;
+  @include for-size(desktop) {
+    margin-left: 34px;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
-.hero__ice {
-  position: relative;
-}
+// .hero__ice {
+//   //   position: relative;
+// }
 .hero__foto--ice {
-  position: absolute;
-  bottom: -260px;
-  right: -20px;
+  display: none;
+  @include for-size(tablet-only) {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    bottom: -56px;
+    right: 46px;
+  }
+
+  @include for-size(desktop) {
+    display: block;
+    position: absolute;
+    bottom: -100px;
+    left: 541px;
+    z-index: 2;
+  }
 }
 
 .hero__foto--tochki {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  @include for-size(desktop) {
+    bottom: 0;
+  }
+}
+.hero__meni-ice {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  @include for-size(desctop) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+.hero__grup {
   position: absolute;
-  bottom: -207px;
-  right: 0;
+  bottom: -51px;
+  left: 0;
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+.dop {
+  background-color: #fff;
+  width: 100vw;
+  height: 30px;
+  padding-top: 100px;
+}
+.dop-ice {
+  margin-top: 28px;
+  margin-left: 32px;
+  margin-bottom: 13px;
+  display: none;
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    margin-left: 32px;
+    margin-bottom: 13px;
+  }
+  @include for-size(desktop) {
+    margin-top: 42px;
+    margin-left: 17px;
+    margin-bottom: 65px;
+  }
+}
+.dop-ice__info {
+  margin-left: 33px;
+}
+
+.dop-ice__text {
+  max-width: 151px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #fcfcfc;
+  @include for-size(desktop) {
+    max-width: 200px;
+
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+.client {
+  display: none;
+  @include for-size(tablet) {
+    display: block;
+    margin-top: 94px;
+    margin-right: 32px;
+  }
+  @include for-size(desktop) {
+    margin-top: 126px;
+    margin-right: 16px;
+  }
+}
+
+.clients__number {
+  text-align: right;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #131313;
+  margin-bottom: 4px;
+  @include for-size(desktop) {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+}
+
+.clients__customers {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: right;
+  color: #fcfcfc;
+  @include for-size(desktop) {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+.clients__customers:not(:first-child) {
+  margin-bottom: 16px;
 }
