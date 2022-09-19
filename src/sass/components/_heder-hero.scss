@@ -73,7 +73,7 @@
     height: 60px;
   }
 }
-.header-open {
+.header--open {
   background: transparent;
   color: #f8d24e;
   border-color: transparent;
@@ -134,9 +134,7 @@
   }
 }
 
-.mob--nenu {
-  //   max-width: 320px;
-  //   min-height: 568px;
+.mobile-menu {
   z-index: 5;
 
   position: fixed;
@@ -144,18 +142,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
+
   background: #84a178;
-  transform: translatey(-150%);
+  transform: translateX(-101%);
+  transition: transform 250ms $cubic-bezier;
   @include for-size(tablet-only) {
     background: #aec6a5;
     font-size: 48px;
     line-height: 59px;
   }
+  @include for-size(desktop) {
+    display: none;
+  }
 }
-.activ {
+.is-open {
   transform: translatey(0);
 }
 .mob-modal {
@@ -194,6 +194,7 @@
   margin-left: auto;
   margin-right: auto;
   @include for-size(tablet) {
+    min-height: 0;
     height: 100%;
     max-width: 768px;
   }
@@ -204,6 +205,8 @@
   }
 }
 .hero__wrap {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
 }
@@ -396,7 +399,7 @@
 }
 .hero__grup {
   position: absolute;
-  bottom: -51px;
+  bottom: -100%;
   left: 0;
   @include for-size(tablet) {
     display: none;
@@ -424,6 +427,8 @@
     margin-top: 42px;
     margin-left: 17px;
     margin-bottom: 65px;
+
+    align-items: flex-end;
   }
 }
 .dop-ice__info {
@@ -446,6 +451,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.7;
+  color: $primary-white-color;
   @include for-size(desktop) {
     max-width: 200px;
 

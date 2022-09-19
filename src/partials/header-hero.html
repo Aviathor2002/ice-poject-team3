@@ -2,9 +2,12 @@
 <section class="section section-padding">
   <div class="conteiner header">
     <div class="header__mob">
-      <svg class="header__icon--logo" width="40" height="37">
-        <use href="./images/svg/svg-sprite.svg#ice-crem-desk"></use>
-      </svg>
+      <a href="">
+        <svg class="header__icon--logo" width="40" height="37">
+          <use href="./images/svg/svg-sprite.svg#ice-crem-desk"></use>
+        </svg>
+      </a>
+
       <ul class="header-navigation">
         <li class="header-navigation__list">
           <a href="" class="header-navigation__link">Home</a>
@@ -20,7 +23,7 @@
         </li>
       </ul>
       <div class="header__btr">
-        <button type="button" class="header-open js-open-modal">
+        <button type="button" class="header--open">
           <svg class="menu-icon" width="32" height="32">
             <use href="./images/svg/svg-sprite.svg#icon-burger"></use>
           </svg>
@@ -32,11 +35,12 @@
           </svg>
         </button>
       </div>
-      <div class="mob--nenu data-modal">
+      <div class="mobile-menu">
         <div class="mob-modal">
-         <svg class="header__icon--logo" width="40" height="37">
-            <use href="./images/svg/svg-sprite.svg#ice-crem-desk"></use>     
-          <button type="button" class="header__icon--close">
+          <svg class="header__icon--logo" width="40" height="37">
+            <use href="./images/svg/svg-sprite.svg#ice-crem-desk"></use>
+          </svg>
+          <button type="button" class="header__icon--close header--close">
             <svg width="19" height="19">
               <use href="./images/svg/svg-sprite.svg#mobile-close"></use>
             </svg>
@@ -56,7 +60,8 @@
             <a href="" class="navigation__link">Contact</a>
           </li>
         </ul>
-        <button type="button" class="header__buy">Buy now
+        <button type="button" class="header__buy">
+          Buy now
           <svg class="subscription-icon" width="5" height="8">
             <use href="./images/svg/svg-sprite.svg#icon-more"></use>
           </svg>
@@ -68,122 +73,127 @@
 
 <section class="section hero">
   <div class="conteiner">
-  <div class="container hero__wrap">
-    <div>
-      <h1 class="hero__text">
-        ice cream made with <span class="hero__text--span">passion</span>
-      </h1>
-      <div class="hero__info">
-        <button class="hero__button" type="button">Products</button>
-        <a href="" class="hero__link">How it’s made?</a>
-      </div>
-      <div class="hero__ice">
-        <picture class="hero__grup">
-          <source
-            srcset="./images/header-hero/mob-grup-1x.png 1x"
-            media="(min-width:768px)"
-          />
-          <img src="./images/header-hero/mob-grup-1x.png" alt="icecream" />
-        </picture>
-        <div class="dop-ice">
-          <picture>
+    <div class="container hero__wrap">
+      <div>
+        <h1 class="hero__text">
+          ice cream made with <span class="hero__text--span">passion</span>
+        </h1>
+        <div class="hero__info">
+          <button class="hero__button" type="button">Products</button>
+          <a href="" class="hero__link">How it’s made?</a>
+        </div>
+        <div class="hero__ice">
+          <picture class="hero__grup">
+            <source
+              srcset="./images/header-hero/mob-grup-1x.png 1x"
+              media="(min-width:768px)"
+            />
+            <img src="./images/header-hero/mob-grup-1x.png" alt="icecream" />
+          </picture>
+          <div class="dop-ice">
+            <picture>
+              <source
+                srcset="
+                  ./images/header-hero/meni-ice-desc-1x.png 1x,
+                  ./images/header-hero/meni-ice-desc-2x.png
+                "
+                media="(min-width:1200px)"
+              />
+              <source
+                srcset="
+                  ./images/header-hero/meni-ice-tab-1x.png 1x,
+                  ./images/header-hero/meni-ice-tab-2x.png
+                "
+                media="(min-width:768px)"
+              />
+              <img
+                src="./images/header-hero/meni-ice-tab-1x.png"
+                alt="many icecream"
+              />
+            </picture>
+            <div class="dop-ice__info">
+              <p class="dop-ice__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
+              </p>
+
+              <button
+                type="button"
+                class="dop-ice__btr js-open-modal"
+                data-modal="read-more"
+              >
+                <svg class="dop-ice-icon" width="40" height="16">
+                  <use href="./images/svg/svg-sprite.svg#Arrow-1"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <picture class="hero__foto--ice">
             <source
               srcset="
-                ./images/header-hero/meni-ice-desc-1x.png 1x,
-                ./images/header-hero/meni-ice-desc-2x.png
+                ./images/header-hero/icecream-deck-1x.png 1x,
+                ./images/header-hero/icecream-deck-2x.png 2x
               "
               media="(min-width:1200px)"
             />
             <source
               srcset="
-                ./images/header-hero/meni-ice-tab-1x.png 1x,
-                ./images/header-hero/meni-ice-tab-2x.png
+                ./images/header-hero/icecream-tab-1x.png 1x,
+                ./images/header-hero/icecream-tab-2x.png 2x
               "
               media="(min-width:768px)"
             />
+            <source
+              srcset="
+                ./images/header-hero/icecream-mo-1x.png 1x,
+                ./images/header-hero/icecream-mo-2x.png 2x
+              "
+              media="(max-width:768px)"
+            />
             <img
-              src="./images/header-hero/meni-ice-tab-1x.png"
-              alt="many icecream"
+              src="./images/header-hero/icecream-deck-2x.png"
+              alt="icecream"
             />
           </picture>
-          <div class="dop-ice__info">
-            <p class="dop-ice__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et
-            </p>
-            <button type="button" class="dop-ice__btr">
-          <svg class="dop-ice-icon" width="40" height="16">
-            <use href="./images/svg/svg-sprite.svg#Arrow-1"></use>
-          </svg>
-            </button>
-          </div>
+
+          <picture class="hero__foto--tochki">
+            <source
+              srcset="
+                ./images/header-hero/tochka-deck-1x.png 1x,
+                ./images/header-hero/tochka-deck-2x.png 2x
+              "
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="
+                ./images/header-hero/tochka-tab-1x.png 1x,
+                ./images/header-hero/tochka-tab-2x.png 2x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/header-hero/tochka-mob-1x.png 1x,
+                ./images/header-hero/tochka-mob-2x.png 2x
+              "
+              media="(max-width:768px)"
+            />
+            <img src="./images/header-hero/tochka-mob-2x.png" alt="icecream" />
+          </picture>
         </div>
-        <picture class="hero__foto--ice">
-          <source
-            srcset="
-              ./images/header-hero/icecream-deck-1x.png 1x,
-              ./images/header-hero/icecream-deck-2x.png 2x
-            "
-            media="(min-width:1200px)"
-          />
-          <source
-            srcset="
-              ./images/header-hero/icecream-tab-1x.png 1x,
-              ./images/header-hero/icecream-tab-2x.png 2x
-            "
-            media="(min-width:768px)"
-          />
-          <source
-            srcset="
-              ./images/header-hero/icecream-mo-1x.png 1x,
-              ./images/header-hero/icecream-mo-2x.png 2x
-            "
-            media="(max-width:768px)"
-          />
-          <img src="./images/header-hero/icecream-deck-2x.png" alt="icecream" />
-        </picture>
-        
-        <picture class="hero__foto--tochki">
-          <source
-            srcset="
-              ./images/header-hero/tochka-deck-1x.png 1x,
-              ./images/header-hero/tochka-deck-2x.png 2x
-            "
-            media="(min-width:1200px)"
-          />
-          <source
-            srcset="
-              ./images/header-hero/tochka-tab-1x.png 1x,
-              ./images/header-hero/tochka-tab-2x.png 2x
-            "
-            media="(min-width:768px)"
-          />
-          <source
-            srcset="
-              ./images/header-hero/tochka-mob-1x.png 1x,
-              ./images/header-hero/tochka-mob-2x.png 2x
-            "
-            media="(max-width:768px)"
-          />
-          <img src="./images/header-hero/tochka-mob-2x.png" alt="icecream" />
-        </picture>
-        
+      </div>
+      <div class="client">
+        <ul>
+          <li>
+            <p class="clients__number">16</p>
+            <p class="clients__customers">cafes</p>
+          </li>
+          <li>
+            <p class="clients__number">23</p>
+            <p class="clients__customers">food trucks</p>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="client">
-      <ul>
-        <li>
-          <p class="clients__number">16</p>
-          <p class="clients__customers">cafes</p>
-        </li>
-        <li>
-          <p class="clients__number">23</p>
-          <p class="clients__customers">food trucks</p>
-        </li>
-      </ul>
-    </div>
-  </div>
   </div>
 </section>
-
-
