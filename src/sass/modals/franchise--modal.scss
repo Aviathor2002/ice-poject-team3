@@ -113,19 +113,18 @@
     padding: 0 16px;
     margin-bottom: 20px;
 
+    &:not(:placeholder-shown):required:invalid {
+      border-color: red;
 
-  &:not(:placeholder-shown):required:invalid {
-    border-color: red;
+      height: 42px;
 
-    height: 42px;
-
-    &::placeholder {
-      font-size: 14px;
-      line-height: 1.42;
+      &::placeholder {
+        font-size: 14px;
+        line-height: 1.42;
+      }
     }
   }
 }
-
 
 .form__label {
   position: absolute;
@@ -153,10 +152,9 @@
 .form__coment:not(:placeholder-shown) + .form__label {
   transform: translateY(-145%);
   color: #d6936d;
-
+}
 .form__input:not(:placeholder-shown):required:invalid {
   border-color: red;
-
 }
 
 .form__coment {
@@ -191,13 +189,11 @@
     line-height: 1.43;
 
     padding-left: 16px;
-
   }
 }
 
 input::placeholder,
 textarea::placeholder {
-
   opacity: 0;
   font-weight: 400;
 
