@@ -96,21 +96,21 @@
   }
 }
 
-.cosial-list__item {
+.social-list__item {
   position: absolute;
 }
 
-.cosial-list__item--github {
+.social-list__item--github {
   bottom: 0;
   left: 0;
 }
 
-.cosial-list__item--telegram {
+.social-list__item--telegram {
   left: 50%;
   transform: translate(-50%, 0);
 }
 
-.cosial-list__item--facebook {
+.social-list__item--facebook {
   bottom: 0;
   right: 0;
 }
