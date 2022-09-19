@@ -20,49 +20,55 @@
     </svg>
   </button>
   <p class="modal__first-title">Buy now</p>
-  <ul class="modal__first-list">
-    <li class="modal__first-item">
-      <picture>
-        <label for="ice cream" class="modal__label">
-        <source
-          srcset="
-            ./images/buy-now-modal/ice-cream.png    1x,
-            ./images/buy-now-modal/ice-cream-2x.png 2x
-          " />
-        <img
-          src="./images/buy-now-modal/ice-cream.png"
-          alt="ice cream"
-          class="modal__first-item-img modal__first-item-img--green"
-      /></picture>
+  <div class="modal__first-list">
+    <input type="checkbox" name="ice cream" id="checkbox-1" class="checkbox" />
+    <div class="modal__first-item">
+      <label for="checkbox-1">
+        <picture>
+          <source
+            srcset="
+              ./images/buy-now-modal/ice-cream.png    1x,
+              ./images/buy-now-modal/ice-cream-2x.png 2x
+            " />
+          <img
+            src="./images/buy-now-modal/ice-cream.png"
+            alt="ice cream"
+            class="modal__first-item-img modal__first-item-img--green"
+        /></picture>
       </label>
       <p class="modal__first-text modal__first-text--green">ice cream</p>
-      <input type="checkbox" name="ice cream" id="ice cream" class="checkbox" />
-    </li>
-    <li class="modal__first-item">
-      <picture>
-        <source
-          srcset="
-            ./images/buy-now-modal/ice-coffee.png    1x,
-            ./images/buy-now-modal/ice-coffee-2x.png 2x
-          " />
-        <img
-          src="./images/buy-now-modal/ice-coffee.png"
-          alt="ice-coffee"
-          class="modal__first-item-img modal__first-item-img--orange"
-      /></picture>
+    </div>
+    <input type="checkbox" name="ice cream" id="checkbox-2" class="checkbox" />
+    <div class="modal__first-item">
+      <label for="checkbox-2">
+        <picture>
+          <source
+            srcset="
+              ./images/buy-now-modal/ice-coffee.png    1x,
+              ./images/buy-now-modal/ice-coffee-2x.png 2x
+            " />
+          <img
+            src="./images/buy-now-modal/ice-coffee.png"
+            alt="ice-coffee"
+            class="modal__first-item-img modal__first-item-img--orange"
+        /></picture>
+      </label>
       <p class="modal__first-text modal__first-text--orange">ice coffee</p>
-    </li>
-    <li class="modal__first-item">
-      <picture>
-        <img
-          src="./images/buy-now-modal/milkshake.png"
-          alt="milkshake"
-          class="modal__first-item-img modal__first-item-img--chocolate"
-        />
-      </picture>
+    </div>
+    <input type="checkbox" name="ice cream" id="checkbox-3" class="checkbox" />
+    <div class="modal__first-item">
+      <label for="checkbox-3">
+        <picture>
+          <img
+            src="./images/buy-now-modal/milkshake.png"
+            alt="milkshake"
+            class="modal__first-item-img modal__first-item-img--chocolate"
+          />
+        </picture>
+      </label>
       <p class="modal__first-text modal__first-text--chocolate">milkshake</p>
-    </li>
-  </ul>
+    </div>
+  </div>
   <form class="modal__first-form">
     <div class="modal__first-field">
       <input
