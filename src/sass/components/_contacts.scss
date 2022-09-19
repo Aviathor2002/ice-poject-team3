@@ -1,4 +1,14 @@
 // !Денис Мазуров
+.section__contacts {
+  padding-bottom: 39px;
+  @include for-size(tablet) {
+    padding-bottom: 40px;
+  }
+  @include for-size(desktop) {
+    padding-bottom: 120px;
+  }
+}
+
 .contacts {
   display: block;
   font-style: normal;
@@ -6,6 +16,11 @@
   @include for-size(tablet) {
     display: flex;
     justify-content: center;
+    gap: 16px;
+  }
+
+  @include for-size(desktop) {
+    gap: 32px;
   }
 }
 
@@ -32,20 +47,11 @@
     width: 224px;
 
     padding: 40px 24px;
-    margin-right: 16px;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
   @include for-size(desktop) {
+    max-width: 100%;
     width: 368px;
     padding: 40px 40px;
-
-    margin-right: 32px;
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
 
@@ -105,6 +111,10 @@
   }
 }
 .contacts__street {
+  &:hover {
+    text-decoration: underline;
+  }
+
   @include fonts(500, 12px, 1.83, 0.04em);
   color: #d6936d;
 

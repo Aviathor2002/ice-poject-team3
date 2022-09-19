@@ -31,16 +31,20 @@
   text-transform: uppercase;
   color: #fcfcfc;
 
+  width: 232px;
+
   @include for-size(tablet) {
     margin-bottom: 9px;
     font-size: 26px;
     letter-spacing: 0.04em;
+    width: 352px;
   }
 
   @include for-size(desktop) {
     margin-bottom: 14px;
     font-weight: 400;
     font-size: 30px;
+    width: 100%;
   }
 }
 
@@ -53,17 +57,19 @@
   color: #fcfcfc;
 
   @include for-size(mobile-only) {
+    width: 200px;
     margin-bottom: 42px;
   }
 
   @include for-size(tablet) {
+    width: 340px;
     font-size: 48px;
     letter-spacing: 0.06em;
   }
 
   @include for-size(desktop) {
     font-size: 58px;
-
+    width: 100%;
     color: #fcfcfc;
   }
 }
