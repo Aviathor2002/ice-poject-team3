@@ -30,7 +30,7 @@
 .products__modal {
   opacity: 1;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   width: calc(100% - 40px);
   max-width: 440px;
   height: 955px;
