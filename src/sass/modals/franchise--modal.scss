@@ -7,9 +7,9 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
   z-index: 30;
-  transition: $cubic-bezier all;
+  transition: transform 250ms $cubic-bezier;
 
   width: calc(100% - 40px);
   max-width: 400px;
@@ -233,7 +233,11 @@ textarea::placeholder {
   }
 }
 
-.modal.active,
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 .overlay.active {
   opacity: 1;
   visibility: visible;
