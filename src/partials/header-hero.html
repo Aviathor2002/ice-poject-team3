@@ -1,6 +1,6 @@
 <!-- !Іщук Віталій -->
 <section class="section section-padding">
-  <div class="conteiner header">
+  <div class="container header">
     <div class="header__mob">
       <a href="">
         <svg class="header__icon--logo" width="40" height="37">
@@ -10,16 +10,16 @@
 
       <ul class="header-navigation">
         <li class="header-navigation__list">
-          <a href="" class="header-navigation__link">Home</a>
+          <a href="#home" class="header-navigation__link">Home</a>
         </li>
         <li class="header-navigation__list">
-          <a href="" class="header-navigation__link">How it’s made?</a>
+          <a href="#made" class="header-navigation__link">How it’s made?</a>
         </li>
         <li class="header-navigation__list">
-          <a href="" class="header-navigation__link">Our products</a>
+          <a href="#products" class="header-navigation__link">Our products</a>
         </li>
         <li class="header-navigation__list">
-          <a href="" class="header-navigation__link">Contact</a>
+          <a href="#contacts" class="header-navigation__link">Contact</a>
         </li>
       </ul>
       <div class="header__btr">
@@ -28,14 +28,18 @@
             <use href="./images/svg/svg-sprite.svg#icon-burger"></use>
           </svg>
         </button>
-        <button type="button" class="header__btr--buy">
+        <button
+          type="button"
+          class="header__btr--buy js-open-modal"
+          data-modal="modal__buy-now"
+        >
           Buy now
           <svg class="subscription-icon" width="5" height="8">
             <use href="./images/svg/svg-sprite.svg#icon-more"></use>
           </svg>
         </button>
       </div>
-      <div class="mobile-menu">
+      <div class="container mobile-menu">
         <div class="mob-modal">
           <svg class="header__icon--logo" width="40" height="37">
             <use href="./images/svg/svg-sprite.svg#ice-crem-desk"></use>
@@ -60,7 +64,12 @@
             <a href="" class="navigation__link">Contact</a>
           </li>
         </ul>
-        <button type="button" class="header__buy">
+
+        <button
+          type="button"
+          class="header__buy js-open-modal"
+          data-modal="modal__buy-now"
+        >
           Buy now
           <svg class="subscription-icon" width="5" height="8">
             <use href="./images/svg/svg-sprite.svg#icon-more"></use>
@@ -71,7 +80,7 @@
   </div>
 </section>
 
-<section class="section hero">
+<section class="section hero" id="home">
   <div class="conteiner">
     <div class="container hero__wrap">
       <div>
@@ -79,8 +88,8 @@
           ice cream made with <span class="hero__text--span">passion</span>
         </h1>
         <div class="hero__info">
-          <button class="hero__button" type="button">Products</button>
-          <a href="" class="hero__link">How it’s made?</a>
+          <a href="#products" class="hero__button">Products</a>
+          <a href="#made" class="hero__link">How it’s made?</a>
         </div>
         <div class="hero__ice">
           <picture class="hero__grup">

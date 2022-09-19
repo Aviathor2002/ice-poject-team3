@@ -75,6 +75,14 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
+
+  transition: fill 250ms $cubic-bezier, border-radius 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    fill: green;
+    border-radius: 50%;
+  }
 }
 
 .modal__title {

@@ -62,6 +62,14 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
+
+  transition: fill 250ms $cubic-bezier, border-radius 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    fill: green;
+    border-radius: 50%;
+  }
 }
 
 .our-location-modal__title {
@@ -110,5 +118,15 @@
     width: 145px;
     font-size: 14px;
     line-height: 1.21;
+  }
+
+  transition: background-color 250ms $cubic-bezier, color 250ms $cubic-bezier;
+
+  &:hover {
+    background-color: $primary-hover-focus-button-color;
+  }
+  &:focus {
+    background-color: $primary-hover-focus-button-color;
+    color: $primary-white-color;
   }
 }

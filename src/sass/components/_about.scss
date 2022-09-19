@@ -1,4 +1,3 @@
-
 // !Мазка Андрей
 .about {
   padding-bottom: 0px;
@@ -131,6 +130,11 @@
   border-radius: 10px;
   border: none;
   margin: 0 auto;
+
+  transition: background-color 250ms $cubic-bezier,
+    background-color 250ms $cubic-bezier, fill 250ms $cubic-bezier,
+    color 250ms $cubic-bezier;
+
   &:hover {
     background-color: #0a8817;
   }
@@ -138,6 +142,7 @@
     background-color: #0a8817;
     color: #fcfcfc;
     fill: #fcfcfc;
+    outline: transparent;
   }
   @include for-size(tablet) {
   }

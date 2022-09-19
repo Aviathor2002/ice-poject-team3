@@ -111,7 +111,8 @@
   }
 }
 .contacts__street {
-  &:hover {
+  &:hover,
+  &:focus {
     text-decoration: underline;
   }
 
@@ -204,6 +205,12 @@
   border: none;
   border-radius: 10px;
 
+  outline: transparent;
+
+  transition: background-color 250ms $cubic-bezier,
+    background-color 250ms $cubic-bezier, fill 250ms $cubic-bezier,
+    color 250ms $cubic-bezier;
+
   &:hover {
     background-color: $primary-hover-focus-button-color;
   }
@@ -229,6 +236,10 @@
   cursor: pointer;
   border: 2px solid $primary-default-button-color;
   border-radius: 10px;
+  outline: transparent;
+
+  transition: background-color 250ms $cubic-bezier, fill 250ms $cubic-bezier,
+    color 250ms $cubic-bezier, border-color 250ms $cubic-bezier;
 
   &:hover {
     border-color: $primary-hover-focus-button-color;

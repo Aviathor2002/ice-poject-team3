@@ -132,6 +132,8 @@
   border-radius: 50%;
   background-color: $primary-default-button-color;
 
+  transition: width 250ms $cubic-bezier, height 250ms $cubic-bezier;
+
   &:hover {
     width: 32px;
     height: 32px;
@@ -145,6 +147,8 @@
 
 .social-list__icon {
   fill: $primary-background-color;
+
+  transition: fill 250ms $cubic-bezier;
 
   .social-list__link:hover &,
   .social-list__link:focus & {
