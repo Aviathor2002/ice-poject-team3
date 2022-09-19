@@ -1,137 +1,66 @@
-<<<<<<< Updated upstream
 <!-- !Сергей Машкоф -->
-<section class="section products">
-  <div class="сontainer">
+<section class="products">
+  <div class="products__container">
     <p class="products__pre-title">100% natural</p>
-    <h2 class="products__title title">products</h2>
+    <h2 class="products__title">Products</h2>
     <ul class="products-list list">
-      <li class="products-list__item">
-        <picture class="icecream">
-          <source
-            srcset="
-              ./images/products/icecreamdesc1x.png 1x,
-              ./images/products/icecreamdesc2x.png 2x
-            "
-            media="(min-width: 1200px)"
-          />
-          <source
-            srcset="
-              ./images/products/icecreamtab1x.png 1x,
-              ./images/products/icecreamtab2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/products/ice-cream1x.png 1x,
-              ./images/products/ice-cream2x.png 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <img
-            src="./images/products/ice-cream1x.png"
-            alt="морожко"
-            width="200px"
-            height="200px"
-          />
-        </picture>
-        <h3 class="products-list__title">ice cream</h3>
-        <p class="products-list__text">
+      <li class="products__item products__item--ice-cream">
+        <div class="products__circle products__circle--ice-cream"></div>
+        <h3 class="products__name products__name--ice-cream">ice cream</h3>
+        <p class="products__content">
           Soft ice cream with a delicate taste. Made with milk, cream, sugar and
           natural stabilizer
         </p>
-        <button type="button" class="products-list__button">
-          <svg class="products-list__icon" width="40" height="14">
+        <button class="button__product" type="button" icecream-data-modal-open>
+          <svg class="arrow" width="40" height="100%">
             <use href="./images/svg/svg-sprite.svg#Arrow-1"></use>
+          </svg>
+          <svg class="arrow__hover" width="50" height="100%">
+            <use href="./images/svg/svg-sprite.svg#Arrow-2"></use>
+          </svg>
+          <svg class="arrow__focus" width="50" height="100%">
+            <use href="./images/svg/svg-sprite.svg#Arrow-3"></use>
           </svg>
         </button>
       </li>
-
-      <li class="products-list__item">
-        <picture class="icecoffe">
-          <source
-            srcset="
-              ./images/products/icecoffedesc1x.png 1x,
-              ./images/products/icecoffedesc2x.png 2x
-            "
-            media="(min-width: 1200px)"
-          />
-          <source
-            srcset="
-              ./images/products/icecoffetab1x.png 1x,
-              ./images/products/icecoffetab2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/products/ice-coffee1x.png 1x,
-              ./images/products/ice-coffee2x.png 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <img
-            src="./images/products/ice-coffee1x.png"
-            alt="кофэ"
-            width="200px"
-            height="200px"
-          />
-        </picture>
-        <h3 class="products-list__title">ice coffee</h3>
-        <p class="products-list__text">
+      <li class="products__item products__item--coffee">
+        <div class="products__circle products__circle--coffee"></div>
+        <h3 class="products__name products__name--coffee">ice coffee</h3>
+        <p class="products__content">
           Fragrant invigorating drink created from 100% natural ingredients
           without the use of preservatives and flavor enhancers
         </p>
-        <button type="button" class="products-list__button">
-          <svg class="products-list__icon" width="40" height="14">
+        <button class="button__product" type="button" coffee-data-modal-open>
+          <svg class="arrow" width="40" height="100%">
             <use href="./images/svg/svg-sprite.svg#Arrow-1"></use>
+          </svg>
+          <svg class="arrow__hover" width="50" height="100%">
+            <use href="./images/svg/svg-sprite.svg#Arrow-2"></use>
+          </svg>
+          <svg class="arrow__focus" width="50" height="100%">
+            <use href="./images/svg/svg-sprite.svg#Arrow-3"></use>
           </svg>
         </button>
       </li>
-
-      <li class="products-list__item">
-        <picture class="milk">
-          <source
-            srcset="
-              ./images/products/milkshakesdesc1x.png 1x,
-              ./images/products/milkshakesdesc2x.png 2x
-            "
-            media="(min-width: 1200px)"
-          />
-          <source
-            srcset="
-              ./images/products/milkshakestab1x.png 1x,
-              ./images/products/milkshakestab2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/products/milkshakes1x.png 1x,
-              ./images/products/milkshakes2x.png 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <img
-            src="./images/products/milkshakes1x.png"
-            alt="коктейль молочный"
-            width="200px"
-            height="200px"
-          />
-        </picture>
-        <h3 class="products-list__title">milkshakes</h3>
-        <p class="products-list__text">
+      <li class="products__item products__item--milkshake">
+        <div class="products__circle products__circle--milkshake"></div>
+        <h3 class="products__name products__name--milkshake">milkshakes</h3>
+        <p class="products__content">
           Sweet drinks based on milk and ice cream, supplemented with syrups,
           fruits, berries and other sweets of your choice
         </p>
-        <button type="button" class="products-list__button">
-          <svg class="products-list__icon" width="40" height="14">
+        <button class="button__product" type="button" milkshake-data-modal-open>
+          <svg class="arrow" width="40" height="100%">
             <use href="./images/svg/svg-sprite.svg#Arrow-1"></use>
+          </svg>
+          <svg class="arrow__hover" width="50" height="100%">
+            <use href="./images/svg/svg-sprite.svg#Arrow-2"></use>
+          </svg>
+          <svg class="arrow__focus" width="50" height="100%">
+            <use href="./images/svg/svg-sprite.svg#Arrow-3"></use>
           </svg>
         </button>
       </li>
     </ul>
   </div>
 </section>
-=======
->>>>>>> Stashed changes
