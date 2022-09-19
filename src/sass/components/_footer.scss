@@ -1,1 +1,208 @@
 // !Чайка Антон
+.footer {
+  padding-top: 0;
+}
+
+.footer__container {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 54px;
+  }
+}
+
+.footer__top-container {
+  @include for-size(tablet-only) {
+    width: 352px;
+  }
+}
+
+.footer__subtitle {
+  margin-bottom: 16px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  color: #fcfcfc;
+
+  width: 232px;
+
+  @include for-size(tablet) {
+    margin-bottom: 9px;
+    font-size: 26px;
+    letter-spacing: 0.04em;
+    width: 352px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 14px;
+    font-weight: 400;
+    font-size: 30px;
+    width: 100%;
+  }
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+
+  @include for-size(mobile-only) {
+    width: 200px;
+    margin-bottom: 42px;
+  }
+
+  @include for-size(tablet) {
+    width: 340px;
+    font-size: 48px;
+    letter-spacing: 0.06em;
+  }
+
+  @include for-size(desktop) {
+    font-size: 58px;
+    width: 100%;
+    color: #fcfcfc;
+  }
+}
+
+.footer__bottom-container {
+  @include for-size(tablet-only) {
+    margin-bottom: 24px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 6px;
+  }
+}
+
+.social-list {
+  position: relative;
+  width: 162px;
+  height: 34px;
+  margin-left: auto;
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: space-between;
+
+  @include for-size(tablet) {
+    margin-bottom: 32px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.social-list__item {
+  position: absolute;
+}
+
+.social-list__item--github {
+  bottom: 0;
+  left: 0;
+}
+
+.social-list__item--telegram {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.social-list__item--facebook {
+  bottom: 0;
+  right: 0;
+}
+
+.social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: $primary-default-button-color;
+
+  &:hover {
+    width: 32px;
+    height: 32px;
+  }
+
+  &:focus {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.social-list__icon {
+  fill: $primary-background-color;
+
+  .social-list__link:hover &,
+  .social-list__link:focus & {
+    fill: #fcfcfc;
+  }
+}
+
+.footer__text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: right;
+  color: #131313;
+
+  @include for-size(mobile-only) {
+    margin-bottom: 40px;
+  }
+}
+
+.footer__phone {
+  color: #fcfcfc;
+}
+
+.footer__line {
+  padding-top: 16px;
+  border-top: 1px solid #e1e1e1;
+
+  @include for-size(tablet) {
+    padding-top: 14px;
+  }
+
+  @include for-size(desktop) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.footer__rights {
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  color: #7a7a7a;
+
+  @include for-size(mobile-only) {
+    width: 200px;
+  }
+
+  @include for-size(tablet) {
+    line-height: 1.52;
+    letter-spacing: 0.02em;
+  }
+
+  @include for-size(desktop) {
+    font-size: 12px;
+    line-height: 1.86;
+  }
+}

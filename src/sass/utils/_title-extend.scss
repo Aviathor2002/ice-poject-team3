@@ -1,20 +1,41 @@
 %title {
   font-family: 'Seymour One';
 
-  font-size: 36px;
-  line-height: calc(45 / 36);
-
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-%pre-title {
-  font-weight: 800;
+  font-weight: 400;
   font-size: 30px;
-  line-height: calc(37 / 30);
+  line-height: calc(38 / 30);
 
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  @include for-size(tablet) {
+    font-size: 34px;
+    line-height: calc(43 / 34);
+    letter-spacing: 0.06em;
+  }
+  @include for-size(desktop) {
+    font-size: 36px;
+    line-height: calc(45 / 36);
+    letter-spacing: 0.06em;
+  }
+}
+
+%pre-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+
+  text-align: center;
+  text-transform: uppercase;
+
+  @include for-size(tablet) {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: calc(27 / 22);
+    letter-spacing: 0.04em;
+  }
+  @include for-size(desktop) {
+    font-size: 30px;
+    line-height: calc(37 / 30);
+  }
 }
