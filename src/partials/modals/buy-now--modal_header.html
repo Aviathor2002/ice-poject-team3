@@ -22,8 +22,8 @@
   <p class="modal__first-title">Buy now</p>
   <ul class="modal__first-list">
     <li class="modal__first-item">
-      <a href=""></a>
       <picture>
+        <label for="ice cream" class="modal__label">
         <source
           srcset="
             ./images/buy-now-modal/ice-cream.png    1x,
@@ -34,10 +34,11 @@
           alt="ice cream"
           class="modal__first-item-img modal__first-item-img--green"
       /></picture>
+      </label>
       <p class="modal__first-text modal__first-text--green">ice cream</p>
+      <input type="checkbox" name="ice cream" id="ice cream" class="checkbox" />
     </li>
     <li class="modal__first-item">
-      <a href=""></a>
       <picture>
         <source
           srcset="
@@ -52,7 +53,6 @@
       <p class="modal__first-text modal__first-text--orange">ice coffee</p>
     </li>
     <li class="modal__first-item">
-      <a href=""></a>
       <picture>
         <img
           src="./images/buy-now-modal/milkshake.png"
@@ -60,39 +60,45 @@
           class="modal__first-item-img modal__first-item-img--chocolate"
         />
       </picture>
-
       <p class="modal__first-text modal__first-text--chocolate">milkshake</p>
     </li>
   </ul>
   <form class="modal__first-form">
-    <input
-      type="text"
-      id="name"
-      name="name"
-      class="modal__first-input"
-      placeholder="Name"
-      required
-      pattern="[A-za-z]*?"
-    />
-
-    <input
-      type="tel"
-      class="modal__first-input"
-      id="tel"
-      name="tel"
-      placeholder="Phone"
-      required
-      pattern="\+?[0-9\s\-\(\)]+"
-    />
-
-    <textarea
-      name="user-comment"
-      id="user-comment"
-      cols="30"
-      rows="10"
-      class="modal__first-textarea"
-      placeholder="Comment"
-    ></textarea>
+    <div class="modal__first-field">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="modal__first-input"
+        placeholder="Name"
+        required
+        pattern="[A-za-z]*?"
+      />
+      <label class="modal__first-label" for="name">Name</label>
+    </div>
+    <div class="modal__first-field">
+      <input
+        type="tel"
+        class="modal__first-input"
+        id="tel"
+        name="tel"
+        placeholder="Phone"
+        required
+        pattern="\+?[0-9\s\-\(\)]+"
+      />
+      <label class="modal__first-label" for="tel">Phone</label>
+    </div>
+    <div class="modal__first-field">
+      <textarea
+        name="user-comment"
+        id="user-comment"
+        cols="30"
+        rows="10"
+        class="modal__first-textarea"
+        placeholder="Comment"
+      ></textarea>
+      <label class="modal__first-label" for="user-comment">Comment</label>
+    </div>
 
     <button type="submit" class="modal__btn-submit">Submit</button>
   </form>
