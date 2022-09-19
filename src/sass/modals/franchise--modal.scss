@@ -135,7 +135,7 @@
   color: $primary-text-color;
   transition: transform 250ms $cubic-bezier;
   @include for-size(tablet) {
-    top: 10px;
+    top: 7px;
     left: 17px;
     font-size: 14px;
     line-height: 1.42;
@@ -144,13 +144,13 @@
 
 .form__input:focus + .form__label,
 .form__input:not(:placeholder-shown) + .form__label {
-  transform: translateY(-148%);
+  transform: translateY(-146%);
   color: #d6936d;
 }
 
 .form__coment:focus + .form__label,
 .form__coment:not(:placeholder-shown) + .form__label {
-  transform: translateY(-145%);
+  transform: translateY(-143%);
   color: #d6936d;
 }
 .form__input:not(:placeholder-shown):required:invalid {
