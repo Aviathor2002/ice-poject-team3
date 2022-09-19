@@ -135,6 +135,16 @@
   border-radius: 17px;
 }
 
+.checkbox:checked + .modal__first-item--green {
+  background-color: #96af8c;
+}
+.checkbox:checked + .modal__first-item--orange {
+  background-color: #efd478;
+}
+.checkbox:checked + .modal__first-item--chocolate {
+  background-color: #d6936d;
+}
+
 .modal__first-item-img {
   position: absolute;
   top: -60px;
@@ -175,7 +185,6 @@
     width: 132px;
   }
   &.modal__first-text--orange {
-    background: #efd478;
     border: 2px solid #efd478;
     box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
     border-radius: 16px;
