@@ -1,39 +1,5 @@
 // !Владислав Сангинови
 
-// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
-
-// .overlay {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//інші стилі
-
-// }
-
-// .modal {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//   інші стилі
-// }
-
-// !потім додаємо клас active(тільки в CSS) щоб JS працював
-
-// .overlay {
-//   opacity: 0;
-//   visibility: hidden;
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: #84a178;
-//   padding: 15px;
-//   z-index: 20;
-//   transition: 0.3s all;
-// }
-
 .modal__buy-now {
   opacity: 0;
   visibility: hidden;
@@ -44,7 +10,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
   z-index: 30;
 
   text-align: center;
@@ -54,7 +20,7 @@
   border: 2px solid $primary-default-button-color;
   border-radius: 10px;
 
-  transition: $cubic-bezier all;
+  transition: transform 250ms $cubic-bezier;
 
   @include for-size(tablet) {
     max-width: 568px;
@@ -63,7 +29,11 @@
   }
 }
 
-.modal.active,
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 .overlay.active {
   opacity: 1;
   visibility: visible;

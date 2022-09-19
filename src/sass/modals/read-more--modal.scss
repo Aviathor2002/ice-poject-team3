@@ -1,32 +1,5 @@
 // !Larysa Furmanchuk
 
-// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
-
-// .overlay {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//інші стилі
-
-// }
-
-// .modal {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//   інші стилі
-// }
-
-// !потім додаємо клас active(тільки в CSS) щоб JS працював
-
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
-
 .modal__read-more {
   opacity: 0;
   visibility: hidden;
@@ -37,7 +10,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
   z-index: 30;
 
   text-align: center;
@@ -47,7 +20,7 @@
   border: 2px solid $primary-default-button-color;
   border-radius: 10px;
 
-  transition: $cubic-bezier all;
+  transition: transform 250ms $cubic-bezier;
 
   @include for-size(tablet) {
     max-width: 568px;
@@ -56,7 +29,11 @@
   }
 }
 
-.modal.active,
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 .overlay.active {
   opacity: 1;
   visibility: visible;
@@ -75,6 +52,14 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
+
+  transition: fill 250ms $cubic-bezier, border-radius 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    fill: green;
+    border-radius: 50%;
+  }
 }
 
 .modal__title {

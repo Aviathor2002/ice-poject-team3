@@ -11,7 +11,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: $cubic-bezier all;
+  transition: all 250ms $cubic-bezier;
 }
 
 .our-location-modal {
@@ -24,7 +24,8 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
+
   z-index: 30;
 
   text-align: center;
@@ -34,7 +35,7 @@
   border: 2px solid $primary-default-button-color;
   border-radius: 10px;
 
-  transition: $cubic-bezier all;
+  transition: transform 250ms $cubic-bezier;
 
   @include for-size(tablet) {
     max-width: 568px;
@@ -43,7 +44,11 @@
   }
 }
 
-.modal.active,
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 .overlay.active {
   opacity: 1;
   visibility: visible;
@@ -62,6 +67,14 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
+
+  transition: fill 250ms $cubic-bezier, border-radius 250ms $cubic-bezier;
+
+  &:hover,
+  &:focus {
+    fill: green;
+    border-radius: 50%;
+  }
 }
 
 .our-location-modal__title {
@@ -110,5 +123,15 @@
     width: 145px;
     font-size: 14px;
     line-height: 1.21;
+  }
+
+  transition: background-color 250ms $cubic-bezier, color 250ms $cubic-bezier;
+
+  &:hover {
+    background-color: $primary-hover-focus-button-color;
+  }
+  &:focus {
+    background-color: $primary-hover-focus-button-color;
+    color: $primary-white-color;
   }
 }

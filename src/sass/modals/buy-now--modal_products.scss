@@ -1,27 +1,10 @@
 // !Владислав Сангинов
 
-// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
-
-// .overlay {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//інші стилі
-
-// }
-
-// .modal {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//   інші стилі
-// }
-
-// !потім додаємо клас active(тільки в CSS) щоб JS працював
-
-.modal.active,
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 .overlay.active {
   opacity: 1;
   visibility: visible;
@@ -38,10 +21,10 @@
   border-radius: 10px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
   padding: 28px 20px 32px;
 
-  transition: 0.3s all;
+  transition: transform 250ms $cubic-bezier;
   z-index: 30;
   @include for-size(tablet) {
     max-width: 568px;

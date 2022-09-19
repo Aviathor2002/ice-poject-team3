@@ -7,9 +7,9 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
   z-index: 30;
-  transition: $cubic-bezier all;
+  transition: transform 250ms $cubic-bezier;
 
   width: calc(100% - 40px);
   max-width: 400px;
@@ -222,20 +222,22 @@ textarea::placeholder {
     font-size: 14px;
     line-height: 17px;
   }
+  transition: background-color 250ms $cubic-bezier, color 250ms $cubic-bezier;
+
+  &:hover {
+    background-color: $primary-hover-focus-button-color;
+  }
+  &:focus {
+    background-color: $primary-hover-focus-button-color;
+    color: $primary-white-color;
+  }
 }
-// }
 
-// .modal {
-
-//   opacity: 0;
-//   visibility: hidden;
-
-//   інші стилі
-// }
-
-// !потім додаємо клас active(тільки в CSS) щоб JS працював
-
-.modal.active,
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 .overlay.active {
   opacity: 1;
   visibility: visible;

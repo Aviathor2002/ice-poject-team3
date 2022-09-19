@@ -40,6 +40,7 @@
   font-size: 16px;
   line-height: 20px;
   color: #fcfcfc;
+  transition: color 250ms $cubic-bezier;
   &:hover,
   &:focus {
     color: #f8d24e;
@@ -59,6 +60,7 @@
   align-items: center;
 
   color: #fcfcfc;
+  transition: color 250ms $cubic-bezier;
   &:hover,
   &:focus {
     color: #f8d24e;
@@ -88,6 +90,8 @@
 .header__btr--buy {
   display: none;
 
+  transition: color 250ms $cubic-bezier, background-color 250ms $cubic-bezier;
+
   @include for-size(tablet) {
     display: block;
     width: 152px;
@@ -107,10 +111,10 @@
     color: #131313;
   }
   &:hover {
-    background: rgba(10, 136, 23, 1);
+    background-color: rgba(10, 136, 23, 1);
   }
   &:focus {
-    background: rgba(10, 136, 23, 1);
+    background-color: rgba(10, 136, 23, 1);
     color: #fcfcfc;
   }
 }
@@ -181,6 +185,7 @@
   font-size: 32px;
   line-height: 39px;
   color: #fcfcfc;
+  transition: color 250ms $cubic-bezier;
   &:hover,
   &:focus {
     color: #131313;
@@ -292,6 +297,9 @@
 }
 
 .hero__button {
+  display: flex;
+  justify-content: center;
+
   width: 62px;
   height: 24px;
   border: 2px solid #f8d24e;
@@ -305,6 +313,7 @@
   background-color: transparent;
 
   color: #131313;
+  transition: border-color 250ms $cubic-bezier, color 250ms $cubic-bezier;
   &:hover {
     border-color: rgba(10, 136, 23, 1);
   }
@@ -334,6 +343,9 @@
   text-align: center;
   text-decoration-line: underline;
   color: #f8d24e;
+
+  transition: color 250ms $cubic-bezier;
+
   &:hover {
     color: #0a8817;
   }
@@ -346,9 +358,7 @@
     line-height: 16px;
   }
 }
-// .hero__ice {
-//   //   position: relative;
-// }
+
 .hero__foto--ice {
   display: none;
   @include for-size(tablet-only) {
@@ -439,6 +449,7 @@
   background-color: transparent;
   border-color: transparent;
   fill: #fcfcfc;
+
   @include for-size(desktop) {
     margin-top: 24px;
   }
