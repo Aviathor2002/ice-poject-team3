@@ -31,40 +31,49 @@
   <div class="franchise-modal__form">
     <form>
       <div class="form">
-        <input
-          type="text"
-          class="form__input"
-          name="user-name"
-          placeholder="Name"
-          required
-          id="user-name"
-        />
-
-        <input
-          type="tel"
-          class="form__input"
-          name="user-tel"
-          placeholder="Phone"
-          required
-          minlength="10"
-          id="user-tel"
-        />
-
-        <input
-          type="email"
-          class="form__input"
-          name="user-email"
-          placeholder="Email"
-          required
-          id="user-email"
-        />
-
-        <textarea
-          name="input-coment"
-          id="user-coment"
-          class="form__coment"
-          placeholder="Comment"
-        ></textarea>
+        <div class="form__wrap">
+          <input
+            type="text"
+            class="form__input"
+            name="user-name"
+            placeholder="Name"
+            required
+            id="user-name"
+          />
+          <label for="user-name" class="form__label">Name</label>
+        </div>
+        <div class="form__wrap">
+          <input
+            type="tel"
+            class="form__input"
+            name="user-tel"
+            placeholder="Phone"
+            required
+            minlength="10"
+            id="user-tel"
+          />
+          <label for="user-tel" class="form__label">Phone</label>
+        </div>
+        <div class="form__wrap">
+          <input
+            type="email"
+            class="form__input"
+            name="user-email"
+            placeholder="Email"
+            required
+            id="user-email"
+          />
+          <label for="user-email" class="form__label">Email</label>
+        </div>
+        <div class="form__wrap">
+          <textarea
+            name="input-coment"
+            id="user-coment"
+            class="form__coment"
+            placeholder="Comment"
+          ></textarea>
+          <label for="form__coment" class="form__label">Comment</label>
+        </div>
       </div>
       <button type="submit" class="form__btn">Submit</button>
     </form>
