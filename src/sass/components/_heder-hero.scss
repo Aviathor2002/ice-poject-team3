@@ -7,8 +7,6 @@
 .header {
   position: relative;
 
-  //   padding-left: 0;
-  //   padding-right: 0;
   margin-left: auto;
   margin-right: auto;
   @include for-size(tablet) {
@@ -27,9 +25,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //   margin-left: 23px;
   margin-top: 12px;
-  //   margin-right: 26px;
 }
 .header-navigation {
   display: none;
@@ -70,9 +66,7 @@
 }
 
 .header__icon--logo {
-  // position: absolute;
-  // left: 20px;
-  // top: 12px;
+  cursor: pointer;
   fill: rgba(248, 210, 78, 1);
   @include for-size(desktop) {
     width: 56px;
@@ -80,11 +74,6 @@
   }
 }
 .header-open {
-  // position: absolute;
-  // top: 26px;
-  // right: 26px;
-  // top: 16px;
-  // right: 20px;
   background: transparent;
   color: #f8d24e;
   border-color: transparent;
@@ -117,8 +106,19 @@
     justify-content: center;
     color: #131313;
   }
+  &:hover {
+    background: rgba(10, 136, 23, 1);
+  }
+  &:focus {
+    background: rgba(10, 136, 23, 1);
+    color: #fcfcfc;
+  }
 }
 
+.subscription-icon {
+  margin-left: 11px;
+  fill: currentColor;
+}
 .header__icon--close {
   background-color: transparent;
   border-color: transparent;
@@ -226,6 +226,14 @@
   text-align: center;
   justify-content: center;
   color: #131313;
+  &:hover {
+    background: rgba(10, 136, 23, 1);
+  }
+  &:focus {
+    background: rgba(10, 136, 23, 1);
+    color: #fcfcfc;
+  }
+
   @include for-size(tablet) {
     display: none;
   }
@@ -263,7 +271,7 @@
 }
 .hero__text--span {
   @include for-size(tablet-only) {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 13px;
   }
 }
@@ -285,7 +293,7 @@
   height: 24px;
   border: 2px solid #f8d24e;
   border-radius: 8px;
-
+  cursor: pointer;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
@@ -294,7 +302,13 @@
   background-color: transparent;
 
   color: #131313;
-
+  &:hover {
+    border-color: rgba(10, 136, 23, 1);
+  }
+  &:focus {
+    border-color: rgba(10, 136, 23, 1);
+    color: rgba(252, 252, 252, 1);
+  }
   @include for-size(desktop) {
     width: 134px;
     height: 42px;
@@ -305,6 +319,7 @@
   }
 }
 .hero__link {
+  cursor: pointer;
   margin-left: 6px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -316,6 +331,12 @@
   text-align: center;
   text-decoration-line: underline;
   color: #f8d24e;
+  &:hover {
+    color: #0a8817;
+  }
+  &:focus {
+    color: #fcfcfc;
+  }
   @include for-size(desktop) {
     margin-left: 34px;
     font-size: 14px;
@@ -328,8 +349,8 @@
 .hero__foto--ice {
   display: none;
   @include for-size(tablet-only) {
+    z-index: -1;
     display: block;
-    z-index: 2;
     position: absolute;
     bottom: -56px;
     right: 46px;
@@ -347,6 +368,7 @@
 .hero__foto--tochki {
   display: none;
   @include for-size(tablet) {
+    z-index: -1;
     display: block;
     position: absolute;
     bottom: 0;
@@ -407,6 +429,15 @@
 .dop-ice__info {
   margin-left: 33px;
 }
+.dop-ice__btr {
+  margin-top: 12px;
+  background-color: transparent;
+  border-color: transparent;
+  fill: #fcfcfc;
+  @include for-size(desktop) {
+    margin-top: 24px;
+  }
+}
 
 .dop-ice__text {
   max-width: 151px;
@@ -415,12 +446,23 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.7;
-  color: #fcfcfc;
   @include for-size(desktop) {
     max-width: 200px;
 
     font-size: 14px;
     line-height: 1.4;
+  }
+}
+
+.dop-ice-icon {
+  color: #fcfcfc;
+  background-color: transparent;
+  &:hover {
+    width: 50px;
+  }
+  &:focus {
+    width: 50px;
+    height: 2px;
   }
 }
 .client {
