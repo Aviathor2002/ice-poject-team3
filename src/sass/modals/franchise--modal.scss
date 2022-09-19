@@ -135,7 +135,7 @@
   color: $primary-text-color;
   transition: transform 250ms $cubic-bezier;
   @include for-size(tablet) {
-    top: 7px;
+    top: 6px;
     left: 17px;
     font-size: 14px;
     line-height: 1.42;
