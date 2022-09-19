@@ -1,1 +1,198 @@
 // !Денис Мазуров
+.contacts {
+  display: block;
+  font-style: normal;
+
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.contacts__box {
+  max-width: 280px;
+  height: 100%;
+  background-color: $primary-white-color;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  padding: 40px 32px;
+
+  @include for-size(mobile-only) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-size(tablet) {
+    width: 224px;
+
+    padding: 40px 24px;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include for-size(desktop) {
+    width: 368px;
+    padding: 40px 40px;
+
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.contacts__category {
+  display: inline;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+
+  background-color: $primary-default-button-color;
+  border-radius: 6px;
+  padding: 3px 7px;
+
+  margin-bottom: 20px;
+
+  @include for-size(tablet) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 32px;
+  }
+}
+.contacts__list {
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include for-size(tablet) {
+    margin-bottom: 32px;
+  }
+}
+.contacts__item--border-top {
+  padding-top: 24px;
+  border-top: 1px solid #e1e1e1;
+
+  @include for-size(tablet) {
+    padding-top: 32px;
+  }
+}
+.contacts__item--border-bottom {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+
+  @include for-size(tablet) {
+    padding-bottom: 32px;
+  }
+}
+
+.contacts__city {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+
+  @include for-size(tablet) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 12px;
+  }
+  @include for-size(desktop) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+}
+.contacts__street {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+  color: #d6936d;
+
+  @include for-size(tablet) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+  }
+  @include for-size(desktop) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+  }
+}
+
+.contacts__work-day {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: $primary-text-color;
+
+  @include for-size(tablet) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+  }
+  @include for-size(desktop) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+  }
+}
+.contacts__work-time {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: $primary-disabled-button-color;
+
+  @include for-size(tablet) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  @include for-size(desktop) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+  }
+}
+.contacts__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $primary-text-color;
+
+  @include for-size(tablet) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.83;
+  }
+  @include for-size(desktop) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.83;
+  }
+}

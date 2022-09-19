@@ -1,14 +1,189 @@
 // !Андрей Конаш
 
-// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
+.franchise-modal {
+  opacity: 0;
+  visibility: hidden;
 
-// .overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  transition: $cubic-bezier all;
 
-//   opacity: 0;
-//   visibility: hidden;
+  width: calc(100% - 40px);
+  max-width: 400px;
 
-//інші стилі
+  background: $primary-white-color;
+  border: 2px solid $primary-default-button-color;
+  border-radius: 10px;
+  padding: 28px;
 
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-size(tablet) {
+    max-width: 568px;
+    width: 100%;
+
+    padding: 32px 60px;
+  }
+}
+
+.franchise-modal__close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border: none;
+  right: 8px;
+  top: 8px;
+  @include for-size(tablet) {
+    right: 20px;
+    top: 20px;
+  }
+  transition: fill 250ms $cubic-bezier;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: green;
+  }
+}
+
+.franchise-modal__title {
+  font-family: 'Seymour One', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #131313;
+  margin-bottom: 20px;
+  @include for-size(tablet) {
+    width: 322px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.franchise-modal__pretitle {
+  font-size: 14px;
+  line-height: 1.43;
+  color: #131313;
+  margin-bottom: 24px;
+  @include for-size(tablet) {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.37;
+  }
+}
+
+.form {
+  margin-bottom: 24px;
+  @include for-size(tablet) {
+    width: 368px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+}
+
+.form__input {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 16px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.41;
+  }
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
+  }
+  @include for-size(tablet) {
+    height: 42px;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.42;
+    }
+  }
+}
+
+.form__input:not(:placeholder-shown):required:invalid {
+  border-color: red;
+}
+
+.form__coment {
+  width: 100%;
+  height: 65px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+
+  margin-bottom: 25px;
+
+  padding-left: 12px;
+  font-size: 12px;
+  line-height: 1.42;
+  color: $primary-text-color;
+  resize: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.41;
+  }
+  @include for-size(tablet) {
+    width: 368px;
+    height: 84px;
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.42;
+    }
+    min-height: 84px;
+    font-size: 14px;
+    line-height: 1.43;
+    padding-left: 0 16px;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.42;
+  color: $primary-text-color;
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
+.form__btn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: $primary-text-color;
+  padding: 12px 34px;
+  background-color: $primary-default-button-color;
+  border-radius: 10px;
+  border: transparent;
+  margin: auto;
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
 // }
 
 // .modal {
@@ -21,8 +196,8 @@
 
 // !потім додаємо клас active(тільки в CSS) щоб JS працював
 
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
