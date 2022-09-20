@@ -29,3 +29,18 @@ img {
 a {
   text-decoration: none;
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
