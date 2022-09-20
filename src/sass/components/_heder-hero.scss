@@ -264,7 +264,7 @@
   text-transform: uppercase;
   color: #fcfcfc;
   @include for-size(tablet) {
-    margin-left: 20px;
+    margin-left: 0;
     padding-top: 104px;
 
     max-width: 180px;
@@ -313,7 +313,7 @@
   font-size: 8px;
   line-height: calc(10 / 8);
   background-color: transparent;
-
+  padding: 0 10px;
   color: #131313;
   transition: border-color 250ms $cubic-bezier, color 250ms $cubic-bezier;
   &:hover {
@@ -324,12 +324,12 @@
     color: rgba(252, 252, 252, 1);
   }
   @include for-size(desktop) {
-    width: 134px;
     height: 42px;
     font-size: 14px;
     line-height: 1.29;
     align-items: center;
     text-align: center;
+    padding: 0 34px;
   }
 }
 .hero__link {
