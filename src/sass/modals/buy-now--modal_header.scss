@@ -146,8 +146,8 @@
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
-  padding-bottom: 20px;
-  height: 135px;
+  padding-bottom: 5px;
+  height: 116px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -172,6 +172,10 @@
     border-radius: 16px;
     border-top: transparent;
     width: 132px;
+  }
+  @include for-size(tablet) {
+    height: 135px;
+    padding-bottom: 20px;
   }
 }
 
