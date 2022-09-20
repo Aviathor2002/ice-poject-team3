@@ -364,6 +364,7 @@
 
   @include for-size(desktop) {
     font-size: 16px;
+    max-width: 242px;
   }
 }
 
