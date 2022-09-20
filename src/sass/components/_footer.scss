@@ -1,9 +1,12 @@
 // !Чайка Антон
 .footer {
-  padding-top: 0;
 }
 
 .footer__container {
+  @include for-size(mobile-only) {
+    margin-bottom: 40px;
+  }
+
   @include for-size(tablet) {
     display: flex;
     justify-content: space-between;
@@ -17,6 +20,9 @@
 }
 
 .footer__top-container {
+  @include for-size(mobile-only) {
+    margin-bottom: 42px;
+  }
   @include for-size(tablet-only) {
     width: 352px;
   }
@@ -58,7 +64,6 @@
 
   @include for-size(mobile-only) {
     width: 200px;
-    margin-bottom: 42px;
   }
 
   @include for-size(tablet) {
@@ -162,10 +167,6 @@
   line-height: 1.86;
   text-align: right;
   color: #131313;
-
-  @include for-size(mobile-only) {
-    margin-bottom: 40px;
-  }
 }
 
 .footer__phone {
@@ -174,13 +175,17 @@
 
 .footer__line {
   padding-top: 16px;
+  padding-bottom: 62px;
   border-top: 1px solid #e1e1e1;
 
   @include for-size(tablet) {
     padding-top: 14px;
+    padding-bottom: 13px;
   }
 
   @include for-size(desktop) {
+    padding-top: 12px;
+    padding-bottom: 11px;
     margin-left: 20px;
     margin-right: 20px;
   }
