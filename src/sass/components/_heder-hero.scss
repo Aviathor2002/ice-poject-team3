@@ -302,7 +302,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  z-index: 50;
   height: 24px;
   border: 2px solid #f8d24e;
   border-radius: 8px;
@@ -334,6 +334,7 @@
 }
 .hero__link {
   cursor: pointer;
+  z-index: 5;
   margin-left: 6px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -447,6 +448,7 @@
   margin-left: 33px;
 }
 .dop-ice__btr {
+  z-index: 5;
   margin-top: 12px;
   background-color: transparent;
   border-color: transparent;
@@ -474,6 +476,8 @@
 }
 
 .dop-ice-icon {
+  cursor: pointer;
+  z-index: 5;
   color: #fcfcfc;
   background-color: transparent;
   &:hover {
