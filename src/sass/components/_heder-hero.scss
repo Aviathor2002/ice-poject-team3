@@ -412,8 +412,10 @@
 }
 .hero__grup {
   position: absolute;
-  bottom: -158%;
-  left: 4px;
+
+  bottom: -290px;
+  left: 0;
+
   @include for-size(tablet) {
     display: none;
   }
@@ -426,7 +428,6 @@
 }
 .dop-ice {
   margin-top: 28px;
-  margin-left: 32px;
   margin-bottom: 13px;
   display: none;
   @include for-size(tablet) {
