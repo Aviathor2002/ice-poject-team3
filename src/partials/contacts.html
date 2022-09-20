@@ -1,8 +1,9 @@
 <!-- !Денис Мазуров -->
-<address>
+<address class="section__contacts" id="contacts">
   <div class="container">
+    <h2 class="contacts__title visually-hidden">Contacts</h2>
+
     <div class="contacts">
-      <!-- <h2 class="contacts__title visually-hidden">Contacts</h2> -->
       <div class="contacts__box">
         <h3 class="contacts__category">CAFE</h3>
         <ul class="contacts__list">
@@ -115,5 +116,31 @@
         </ul>
       </div>
     </div>
+    <ul class="contacts__button">
+      <li class="contacts__button-item">
+        <button
+          type="button"
+          class="contacts__button-location js-open-modal"
+          data-modal="our-location"
+        >
+          Our Locations
+          <svg class="contacts__button-icon" width="5" height="8">
+            <use href="./images/svg/svg-sprite.svg#icon-more"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="contacts__button-item">
+        <button
+          type="button"
+          class="contacts__button-franchise js-open-modal"
+          data-modal="franchise"
+        >
+          Franchise
+          <svg class="contacts__button-icon" width="5" height="8">
+            <use href="./images/svg/svg-sprite.svg#icon-more"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
 </address>

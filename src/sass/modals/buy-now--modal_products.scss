@@ -1,28 +1,167 @@
 // !Владислав Сангинов
 
-// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 
-// .overlay {
+.products__modal {
+  opacity: 1;
+  visibility: hidden;
+  position: fixed;
+  width: calc(100% - 40px);
+  max-width: 440px;
+  height: 955px;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  padding: 28px 20px 32px;
 
-//   opacity: 0;
-//   visibility: hidden;
+  transition: transform 250ms $cubic-bezier;
+  z-index: 30;
+  @include for-size(tablet) {
+    max-width: 568px;
+    min-height: 990px;
+    padding: 32px 40px;
+  }
+}
 
-//інші стилі
+.products__modal-icon-close {
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  border: none;
+  background-color: transparent;
+  transition: fill 250ms $cubic-bezier;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: green;
+    border-radius: 50%;
+  }
+}
 
-// }
+.products__modal-title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0 auto;
+  color: #131313;
+  margin-bottom: 15px;
+  width: 150px;
+  text-align: center;
+  @include for-size(tablet) {
+    width: 280px;
+  }
+}
 
-// .modal {
+.products__modal-img {
+  display: flex;
+  justify-content: center;
+}
 
-//   opacity: 0;
-//   visibility: hidden;
+.product__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 39px;
+  @include for-size(tablet) {
+    gap: 20px;
+  }
+}
 
-//   інші стилі
-// }
+.product__list-item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 2px solid #9cbe8f;
+  border-radius: 40px;
+  width: 53px;
+  height: 72px;
 
-// !потім додаємо клас active(тільки в CSS) щоб JS працював
+  @include for-size(tablet) {
+    height: 90px;
+    width: 65px;
+    border-radius: 40px;
+  }
+}
 
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
+.product-list-text {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 2.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #131313;
+  border: 2px solid #9cbe8f;
+  background-color: #9cbe8f;
+  border-radius: 50%;
+  width: 43px;
+  height: 43px;
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+  @include for-size(tablet) {
+    font-size: 12px;
+    line-height: 2.3;
+    width: 53px;
+    height: 53px;
+  }
+}
+
+.product-list-text--bottom {
+  font-size: 10px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #131313;
+  @include for-size(tablet) {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+
+.ingredients__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #131313;
+  margin-bottom: 24px;
+  @include for-size(tablet) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.ingredients__title-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 48px;
+}
+
+.ingredients__title-text {
+  font-size: 14px;
+  line-height: 1.78;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.04em;
+  color: #131313;
+}
+
+.modal__first-textarea--margin-bottom {
+  margin-bottom: 32px;
+}

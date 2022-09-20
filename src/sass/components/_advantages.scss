@@ -1,1 +1,120 @@
 // !Мазка Андрей
+.advantages {
+  padding-top: 48px;
+  @include for-size(tablet) {
+    padding-top: 0px;
+  }
+  @include for-size(desktop) {
+    padding-top: 60px;
+  }
+}
+.advantages__title {
+  @extend %pre-title;
+  color: #fcfcfc;
+  margin-bottom: 12px;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.advantages__list {
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.advantages__item {
+  @include for-size(tablet) {
+    max-width: 152px;
+  }
+  @include for-size(desktop) {
+    max-width: 368px;
+    margin-bottom: 40px;
+  }
+}
+.advantages__item--cow::before {
+  content: '';
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  background-image: url('../images/cow-1x.png');
+  background-size: 50px 50px;
+  @include for-size(retina) {
+    background-image: url('../images/cow-2x.png');
+  }
+}
+.advantages__item--weight::before {
+  content: '';
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  background-image: url('../images/weight-1x.png');
+  background-size: 50px 50px;
+  @include for-size(retina) {
+    background-image: url('../images/weight-2x.png');
+  }
+}
+.advantages__item--icecrema::before {
+  content: '';
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 16px;
+  background-image: url('../images/ice crema-1x.png');
+  background-size: 50px 50px;
+  @include for-size(retina) {
+    background-image: url('../images/ice crema-2x.png');
+  }
+}
+.advantages__item:not(:last-child) {
+  margin-bottom: 25px;
+  @include for-size(tablet) {
+    margin-bottom: 0px;
+  }
+}
+.advantages__item--index {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  margin-bottom: 18px;
+  @include for-size(tablet) {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    line-height: 1.23;
+  }
+}
+.advantages__item--text {
+  width: 230px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+  color: #fcfcfc;
+  margin: 0 auto;
+  @include for-size(tablet) {
+    width: 100%;
+    font-size: 14px;
+  }
+  @include for-size(desktop) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.76;
+    padding: 0 5px;
+  }
+}
