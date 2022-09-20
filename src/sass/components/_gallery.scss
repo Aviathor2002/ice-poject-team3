@@ -1,1 +1,153 @@
 // !Гармаш Александр
+.slider {
+  position: relative;
+
+  &__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__backdrop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 110vw;
+    height: 150%;
+    z-index: -10;
+    top: 100px;
+    background-position: center;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    object-fit: cover;
+    @media screen and (min-width: 768px) {
+      width: 110vw;
+      height: 135%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 110vw;
+      height: 111%;
+    }
+  }
+}
+
+.gallery {
+  padding: 0;
+  margin-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 55px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 130px;
+  }
+  &__img {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*======== Reviews ========*/
+
+.reviews {
+  text-align: center;
+  margin-bottom: 100px;
+
+  &__img {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 44px;
+  }
+
+  &__text {
+    padding: 30px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+
+    background-color: #84a178;
+    border-radius: 24px;
+    font-size: 12px;
+    line-height: 2.5;
+    text-align: center;
+
+    color: #fcfcfc;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 768px) {
+      padding: 30px 40px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.86;
+      text-align: center;
+      letter-spacing: 0.04em;
+
+      color: #fcfcfc;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 40px 110px;
+      font-size: 16px;
+
+      text-align: center;
+      letter-spacing: 0.04em;
+
+      color: #fcfcfc;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+    text-align: center;
+
+    color: #131313;
+    margin-bottom: 20px;
+  }
+}
+
+/*======== Custom dots ========*/
+
+.reviews .slick-slider li {
+  margin: 10px 10px;
+
+  @media screen and (min-width: 768px) {
+    margin: 10px 4px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 10px 40px;
+  }
+}
+
+.reviews .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0;
+}
+.reviews .slick-dots li {
+  list-style: none;
+  margin-right: 10px;
+  margin: 10px;
+}
+.slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+.slick-dots .slick-active button {
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary-bgc);
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+}
