@@ -16,27 +16,28 @@
   position: fixed;
   width: calc(100% - 40px);
   max-width: 440px;
-  height: 955px;
   background-color: #fcfcfc;
   border-radius: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2);
-  padding: 28px 20px 32px;
+  padding: 10px 20px 10px;
 
   transition: transform 250ms $cubic-bezier;
   z-index: 30;
   @include for-size(tablet) {
     max-width: 568px;
-    min-height: 990px;
-    padding: 32px 40px;
+    padding: 10px 40px;
+  }
+  @include for-size(desktop) {
+    padding: 10px 40px 5px;
   }
 }
 
 .products__modal-icon-close {
   position: absolute;
   right: 20px;
-  top: 28px;
+  top: 12px;
   border: none;
   background-color: transparent;
   transition: fill 250ms $cubic-bezier;
@@ -53,13 +54,16 @@
   font-style: normal;
   font-size: 20px;
   line-height: 1.4;
-  margin: 0 auto;
+  margin: 0 auto 5px;
   color: #131313;
-  margin-bottom: 15px;
+
   width: 150px;
   text-align: center;
   @include for-size(tablet) {
     width: 280px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 2px;
   }
 }
 
@@ -72,9 +76,12 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 39px;
+  margin-bottom: 10px;
   @include for-size(tablet) {
     gap: 20px;
+  }
+  @include for-size(desktop) {
+    margin-bottom: 2px;
   }
 }
 
@@ -85,10 +92,10 @@
   border: 2px solid #9cbe8f;
   border-radius: 40px;
   width: 53px;
-  height: 72px;
+  height: 69px;
 
   @include for-size(tablet) {
-    height: 90px;
+    height: 79px;
     width: 65px;
     border-radius: 40px;
   }
@@ -111,8 +118,8 @@
   @include for-size(tablet) {
     font-size: 12px;
     line-height: 2.3;
-    width: 53px;
-    height: 53px;
+    width: 46px;
+    height: 46px;
   }
 }
 
@@ -139,18 +146,28 @@
   justify-content: center;
   text-align: center;
   color: #131313;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   @include for-size(tablet) {
     font-size: 20px;
     line-height: 1.4;
+  }
+  @include for-size(tablet) {
+    margin-bottom: 1px;
   }
 }
 
 .ingredients__title-list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
-  margin-bottom: 48px;
+  gap: 3px;
+  margin-bottom: 10px;
+  @include for-size(tablet-only) {
+    gap: 6px;
+    margin-bottom: 13px;
+  }
+  @include for-size(desktop) {
+    gap: 1px;
+  }
 }
 
 .ingredients__title-text {
