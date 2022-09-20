@@ -28,6 +28,10 @@
   padding-top: 12px;
 }
 .header-navigation {
+  display: flex;
+  position: relative;
+  z-index: 3;
+
   display: none;
   @include for-size(desktop) {
     display: flex;
@@ -77,10 +81,16 @@
 }
 .header--open {
   background: transparent;
-  color: #f8d24e;
+  fill: #fff;
   border-color: transparent;
+  cursor: pointer;
+  z-index: 3;
   @include for-size(desktop) {
     display: none;
+  }
+  transition: fill 250ms $cubic-bezier;
+  &:hover {
+    fill: #f8d24e;
   }
 }
 
@@ -96,7 +106,7 @@
     display: block;
     width: 152px;
     height: 42px;
-    z-index: 10000;
+    z-index: 3;
     background: #f8d24e;
     border-color: transparent;
     border-radius: 10px;
@@ -365,7 +375,7 @@
 .hero__foto--ice {
   display: none;
   @include for-size(tablet-only) {
-    z-index: -1;
+    z-index: 1;
     display: block;
     position: absolute;
     bottom: -56px;
@@ -481,6 +491,8 @@
   z-index: 5;
   color: #fcfcfc;
   background-color: transparent;
+
+  transition: width 250ms $cubic-bezier, height 250ms $cubic-bezier;
   &:hover {
     width: 50px;
   }
