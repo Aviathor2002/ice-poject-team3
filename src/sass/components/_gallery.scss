@@ -33,7 +33,13 @@
 
 .gallery {
   padding: 0;
-  margin-bottom: 130px;
+  margin-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 55px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 130px;
+  }
   &__img {
     padding: 0;
     margin-left: auto;
