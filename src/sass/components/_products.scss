@@ -404,6 +404,8 @@
   height: 50px;
   padding: 0;
 
+  cursor: pointer;
+
   @include for-size(desktop) {
     bottom: 10px;
     width: 250px;

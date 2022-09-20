@@ -129,11 +129,10 @@
   cursor: pointer;
   border-radius: 10px;
   border: none;
-  margin: 0 auto;
-
   transition: background-color 250ms $cubic-bezier,
     background-color 250ms $cubic-bezier, fill 250ms $cubic-bezier,
     color 250ms $cubic-bezier;
+  margin: 0 auto;
 
   &:hover {
     background-color: #0a8817;
@@ -145,6 +144,7 @@
     outline: transparent;
   }
   @include for-size(tablet) {
+    margin: 0;
   }
 }
 .about__button--icon {
