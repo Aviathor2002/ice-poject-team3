@@ -1,28 +1,302 @@
 // !Владислав Сангинови
 
-// !В оверлеї і модальні вікна скриваємо командами: (приклад внизу можна стерти після виконання роботи)
+.modal__buy-now {
+  opacity: 0;
+  visibility: hidden;
 
-// .overlay {
+  width: calc(100% - 40px);
+  max-width: 400px;
 
-//   opacity: 0;
-//   visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 30;
 
-//інші стилі
+  text-align: center;
+  padding: 28px;
 
-// }
+  background: $primary-white-color;
+  border: 2px solid $primary-default-button-color;
+  border-radius: 10px;
 
-// .modal {
+  transition: transform 250ms $cubic-bezier;
 
-//   opacity: 0;
-//   visibility: hidden;
+  @include for-size(tablet) {
+    max-width: 568px;
 
-//   інші стилі
-// }
+    padding: 32px 60px;
+  }
+}
 
-// !потім додаємо клас active(тільки в CSS) щоб JS працював
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 
-// .modal.active,
-// .overlay.active {
-//   opacity: 1;
-//   visibility: visible;
-// }
+.buy-now__modal-icon-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: none;
+  background-color: transparent;
+  transition: fill 250ms $cubic-bezier;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: green;
+    border-radius: 50%;
+  }
+}
+
+.modal__first-title {
+  font-family: 'Seymour One';
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 83px;
+  @include for-size(tablet) {
+    margin-bottom: 100px;
+  }
+}
+
+.modal__first-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 30px;
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 32px;
+  }
+}
+
+.modal__first-item {
+  margin-bottom: 20px;
+  position: relative;
+  cursor: pointer;
+  max-width: 100%;
+  display: inline-block;
+  transition: transform 250ms $cubic-bezier;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.modal__label--cursor {
+  cursor: pointer;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + .modal__first-item {
+  transform: scale(1.09);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 17px;
+}
+
+.checkbox:checked + .modal__first-item--green {
+  background-color: #96af8c;
+}
+.checkbox:checked + .modal__first-item--orange {
+  background-color: #efd478;
+}
+.checkbox:checked + .modal__first-item--chocolate {
+  background-color: #d6936d;
+}
+
+.modal__first-item-img {
+  position: absolute;
+  top: -60px;
+  z-index: 1;
+
+  &.modal__first-item-img--green {
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+  }
+
+  &.modal__first-item-img--orange {
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+  }
+
+  &.modal__first-item-img--chocolate {
+    box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+  }
+}
+
+.modal__first-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #131313;
+  &.modal__first-text--green {
+    border: 2px solid #96af8c;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+    border-radius: 16px;
+    border-top: transparent;
+    width: 132px;
+  }
+  &.modal__first-text--orange {
+    border: 2px solid #efd478;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+    border-radius: 16px;
+    border-top: transparent;
+    width: 132px;
+  }
+  &.modal__first-text--chocolate {
+    border: 2px solid #d6936d;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+    border-radius: 16px;
+    border-top: transparent;
+    width: 132px;
+  }
+}
+
+.modal__first-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__first-field {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal__first-label {
+  position: absolute;
+  top: 8px;
+  left: 13px;
+  font-size: 12px;
+  line-height: 1.41;
+  transition: transform 250ms $cubic-bezier;
+  @include for-size(tablet) {
+    top: 10px;
+    left: 51px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+}
+
+.modal__first-label--left {
+  @include for-size(tablet) {
+    left: 74px;
+  }
+}
+
+.modal__first-input:focus + .modal__first-label,
+.modal__first-input:not(:placeholder-shown) + .modal__first-label {
+  transform: translateY(-148%);
+  color: #d6936d;
+}
+
+.modal__first-textarea:focus + .modal__first-label,
+.modal__first-textarea:not(:placeholder-shown) + .modal__first-label {
+  transform: translateY(-145%);
+  color: #d6936d;
+}
+
+.modal__first-input {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 20px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  padding: 8px 12px;
+  &::placeholder {
+    opacity: 0;
+    font-size: 12px;
+    line-height: 1.41;
+  }
+  &:not(:placeholder-shown):required:invalid {
+    border-color: red;
+  }
+  @include for-size(tablet) {
+    width: 368px;
+    height: 42px;
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.42;
+    }
+  }
+}
+
+.modal__first-textarea {
+  width: 100%;
+  height: 65px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  resize: none;
+  padding: 8px 12px;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.41;
+    opacity: 0;
+  }
+  @include for-size(tablet) {
+    width: 368px;
+    height: 84px;
+    &::placeholder {
+      font-size: 14px;
+      line-height: 1.42;
+    }
+  }
+}
+
+.modal__btn-submit {
+  position: relative;
+  width: 114px;
+  height: 42px;
+  background: #f8d24e;
+  border-radius: 10px;
+  border-color: transparent;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #131313;
+  cursor: pointer;
+  transition: border-color 250ms $cubic-bezier, box-shadow 250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    border-color: #96af8c;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  }
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+.label {
+  opacity: 1;
+}
