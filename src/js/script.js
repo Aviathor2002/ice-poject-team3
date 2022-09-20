@@ -16,7 +16,6 @@ if ($(window).width() > 992) {
     );
   });
 }
-
 /*
  jQuery animateNumber plugin v0.0.14
  (c) 2013, Alexandr Borisov.
