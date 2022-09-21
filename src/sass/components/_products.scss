@@ -436,30 +436,19 @@
   }
 
   &:hover {
-    .arrow__hover {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
     .arrow {
-      display: none;
+      transform: scale(1.5);
     }
   }
 
   &:focus {
-    .arrow__focus {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .arrow,
-    .arrow__hover {
-      display: none;
+    .arrow {
+      transform: scale(1.5);
     }
   }
 }
 
-.arrow__hover,
-.arrow__focus {
-  display: none;
+.arrow {
+  transition: transform 250ms $cubic-bezier;
+  transform: scale(1);
 }
