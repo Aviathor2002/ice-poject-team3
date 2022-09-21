@@ -422,10 +422,10 @@
 }
 .hero__grup {
   position: absolute;
+
   bottom: -340px;
   left: 0;
-  width: 100%;
-  z-index: -1;
+
   @include for-size(tablet) {
     display: none;
   }
