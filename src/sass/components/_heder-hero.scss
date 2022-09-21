@@ -1,6 +1,6 @@
-// !Іщук Віталій
+// !Іщук Віталій!! //
 .section-padding {
-  padding-top: 1px;
+  padding-top: 0;
   padding-bottom: 0;
 }
 .header {
@@ -386,14 +386,14 @@
     position: absolute;
     bottom: -100px;
     left: 541px;
-    z-index: 2;
+    z-index: -1;
   }
 }
 
 .hero__foto--tochki {
   display: none;
   @include for-size(tablet) {
-    z-index: -1;
+    z-index: -2;
     display: block;
     position: absolute;
     bottom: 0;
