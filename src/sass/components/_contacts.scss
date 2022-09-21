@@ -1,6 +1,7 @@
 // !Денис Мазуров
-.section__contacts {
+.contacts__section {
   padding-bottom: 39px;
+
   @include for-size(tablet) {
     padding-bottom: 40px;
   }
