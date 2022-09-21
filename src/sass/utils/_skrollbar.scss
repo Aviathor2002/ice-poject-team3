@@ -3,15 +3,18 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #d4d4d4;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: $primary-default-button-color;
+  background-color: $primary-default-button-color;
   border-radius: 10px;
-  border: 3px solid $primary-background-color;
+  border: 3px solid #d4d4d4;
 
   &:hover {
     background-color: $primary-hover-focus-button-color;
+    border: 3px solid transparent;
   }
 }
