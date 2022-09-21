@@ -1,15 +1,5 @@
 // !Владислав Сангинов
 
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
 .products__modal {
   opacity: 1;
   visibility: hidden;

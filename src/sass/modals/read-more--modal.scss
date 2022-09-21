@@ -29,16 +29,6 @@
   }
 }
 
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  visibility: visible;
-}
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
 .modal__cross {
   position: absolute;
   top: 8px;
