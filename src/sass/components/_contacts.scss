@@ -59,6 +59,7 @@
   display: inline-block;
 
   @include fonts(500, 12px, 1.86, 0.04em);
+  font-style: normal;
 
   background-color: $primary-default-button-color;
   border-radius: 6px;
@@ -80,19 +81,15 @@
     margin-bottom: 32px;
   }
 }
-.contacts__item--border-top {
-  padding-top: 24px;
-  border-top: 1px solid #e1e1e1;
 
-  @include for-size(tablet) {
-    padding-top: 32px;
-  }
-}
-.contacts__item--border-bottom {
+.contacts__list--border {
+  padding-top: 24px;
   padding-bottom: 24px;
+  border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
 
   @include for-size(tablet) {
+    padding-top: 32px;
     padding-bottom: 32px;
   }
 }
@@ -100,6 +97,7 @@
 .contacts__city {
   @include fonts(500, 12px, 1.86, 0.04em);
   margin-bottom: 8px;
+  font-style: normal;
 
   @include for-size(tablet) {
     @include fonts(500, 14px, 1.86, 0.04em);
@@ -117,6 +115,7 @@
   }
 
   @include fonts(500, 12px, 1.83, 0.04em);
+  font-style: normal;
   color: #d6936d;
 
   @include for-size(tablet) {
@@ -130,6 +129,7 @@
 
 .contacts__work-day {
   @include fonts(500, 12px, 1.86, 0.04em);
+  font-style: normal;
   color: $primary-text-color;
 
   @include for-size(tablet) {
@@ -142,6 +142,7 @@
 
 .contacts__work-time {
   @include fonts(500, 12px, 1.86, 0.04em);
+  font-style: normal;
   color: $primary-disabled-button-color;
 
   @include for-size(tablet) {
@@ -153,6 +154,7 @@
 }
 .contacts__link {
   @include fonts(500, 12px, 1.5, null);
+  font-style: normal;
   color: $primary-text-color;
 
   @include for-size(tablet) {
