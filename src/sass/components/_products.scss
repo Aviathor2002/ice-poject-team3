@@ -101,14 +101,11 @@
 .products__item {
   position: relative;
 
-  padding-top: 123px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 123px 40px 20px;
   margin-right: auto;
   margin-left: auto;
   display: block;
   width: 280px;
-  height: 420px;
   border-radius: 24px;
 
   &--ice-cream {
@@ -130,20 +127,15 @@
 
   @include for-size(tablet) {
     flex-basis: calc((100% - 32px) / 3);
-    height: 428px;
     width: 224px;
-    padding-top: 108px;
-    padding-right: 26px;
-    padding-left: 26px;
+    padding: 108px 26px 20px;
   }
 
   @include for-size(desktop) {
     flex-basis: calc((100% - 64px) / 3);
-    height: 535px;
+
     width: 370px;
-    padding-top: 166px;
-    padding-right: 63px;
-    padding-left: 63px;
+    padding: 166px 63px 30px;
   }
 }
 
@@ -389,10 +381,10 @@
 }
 
 .button__product {
-  position: absolute;
-  bottom: 20px;
-  right: 50%;
-  transform: translateX(50%);
+  // position: absolute;
+  // bottom: 20px;
+  // right: 50%;
+  // transform: translateX(50%);
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -400,17 +392,47 @@
   border: none;
 
   outline: transparent;
-
+  height: 40px;
   width: 150px;
-  height: 50px;
   padding: 0;
 
   cursor: pointer;
 
+  &--ice-cream {
+    margin-top: 90px;
+  }
+  &--coffee {
+    margin-top: 90px;
+  }
+  &--milkshake {
+    margin-top: 90px;
+  }
+  @include for-size(tablet) {
+    &--ice-cream {
+      margin-top: 89px;
+    }
+    &--coffee {
+      margin-top: 40px;
+    }
+    &--milkshake {
+      margin-top: 60px;
+    }
+  }
+
   @include for-size(desktop) {
+    height: 50px;
     bottom: 10px;
     width: 250px;
-    height: 100px;
+
+    &--ice-cream {
+      margin-top: 92px;
+    }
+    &--coffee {
+      margin-top: 60px;
+    }
+    &--milkshake {
+      margin-top: 60px;
+    }
   }
 
   &:hover {
