@@ -1,0 +1,17 @@
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $primary-default-button-color;
+  border-radius: 10px;
+  border: 3px solid $primary-background-color;
+
+  &:hover {
+    background-color: $primary-hover-focus-button-color;
+  }
+}
