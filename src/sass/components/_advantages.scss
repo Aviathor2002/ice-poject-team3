@@ -1,12 +1,15 @@
 // !Мазка Андрей
-.advantages {
-  padding-top: 48px;
+.section.advantages {
+  padding-bottom: 0;
   @include for-size(tablet) {
-    padding-top: 0px;
+    padding-bottom: 60px;
   }
   @include for-size(desktop) {
     padding-top: 60px;
   }
+}
+.advantages {
+  padding-top: 48px;
 }
 .advantages__title {
   @extend %pre-title;

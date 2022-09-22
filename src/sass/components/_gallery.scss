@@ -1,6 +1,13 @@
 // !Гармаш Александр
 .slider {
   position: relative;
+  padding-top: 50px;
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+  }
 
   &__img {
     margin-left: auto;
@@ -10,6 +17,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    bottom: -100px;
     width: 110vw;
     height: 150%;
     z-index: -10;
