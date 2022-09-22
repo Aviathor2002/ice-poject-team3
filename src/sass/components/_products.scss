@@ -16,9 +16,7 @@
 
   @include for-size(tablet) {
     padding-top: 61px;
-    padding-right: 31px;
     padding-bottom: 82px;
-    padding-left: 33px;
 
     background-image: url(../images/products/bg-mobTab.png);
     @include for-size(retina) {
@@ -28,9 +26,7 @@
 
   @include for-size(desktop) {
     padding-top: 60px;
-    padding-right: 13px;
     padding-bottom: 66px;
-    padding-left: 13px;
 
     background-image: url(../images/products/bg-mobDesc.png);
 
